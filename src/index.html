@@ -1,12 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>모바일청첩장</title>
+	<title>성수와 하진이의 결혼식에 초대합니다.</title>
 </head>
+
 <body>
-    <div id="root">초대합니다!</div>
+	<center>
+		<div id="intro_section">
+			<img id='intro_image' src="./images/intro_image.png" />
+
+			<p> <strong id="groom" class="name scroll_animation scroll_up" data-sa-delay="800">성수</strong>
+				<span class="scroll_animation scroll_up spaceText"
+					data-sa-delay="1500">&nbsp;&nbsp;그리고&nbsp;&nbsp;</span>
+				<strong class="name scroll_animation scroll_up" data-sa-delay="2200">하진</strong>
+			</p>
+
+			<h1 class="scroll_animation scroll_up" data-sa-delay="3000">결혼합니다.</h1>
+		</div>
+
+		<div id="summary_section" class="section">
+			<hr class="solid divider">
+
+			<p class='scroll_animation scroll_up highlight' data-sa-margin="300" data-sa-delay="300">2022년 10월 2일,
+				일요일 오후 12시 30분</p>
+			<p class='scroll_animation scroll_up highlight' data-sa-delay="600">양재 엘블레스</p>
+		</div>
+
+		<div id="video_section" class="scroll_animation scroll_up section" data-sa-margin="300" data-sa-delay="300">
+			<h1 class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">초대 영상 보기</h1>
+
+			<iframe class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="1000" width="40%"
+				height="600" src="https://www.youtube.com/embed/sqgxcCjD04s?controls=0" title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+
+			<div class="space"></div>
+
+			<p class="scroll_animation scroll_up" data-sa-margin="200" data-sa-delay="300"><strong class='name'>이영철
+					∙ 김봉옥</strong><span class='spaceText'>
+					의&nbsp;&nbsp;&nbsp;아들&nbsp;&nbsp;&nbsp;</span><strong class='name'>성수</strong></p>
+			<p class="scroll_animation scroll_up" data-sa-margin="200" data-sa-delay="600"><strong class='name'>김남규
+					∙ 김귀원</strong><span class='spaceText'>
+					의&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;</span><strong class='name'>하진</strong></p>
+		</div>
+
+		<div id='calendar_section' class="scroll_animation scroll_up section">
+			<h1>10월 2일</h1>
+			<h3>일요일, 오후 12시 30분</h3>
+
+			<ul class="weekdays">
+				<li>Su</li>
+				<li>Mo</li>
+				<li>Tu</li>
+				<li>We</li>
+				<li>Th</li>
+				<li>Fr</li>
+				<li>Sa</li>
+			</ul>
+
+			<ul class="days">
+				<li>9/18</li>
+				<li>19</li>
+				<li>20</li>
+				<li>21</li>
+				<li>22</li>
+				<li>23</li>
+				<li>24</li>
+				<li>25</li>
+				<li>26</li>
+				<li>27</li>
+				<li>28</li>
+				<li>29</li>
+				<li>30</li>
+				<li>10/1</li>
+				<li><span class="active">2</span></li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+				<li>17</li>
+				<li>18</li>
+				<li>19</li>
+				<li>20</li>
+				<li>21</li>
+				<li>22</li>
+			</ul>
+		</div>
+
+		<marquee scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'>xx</span>일 남았습니다.
+		</marquee>
+
+		<div id='picture_section' class="scroll_animation scroll_up section">
+			<h1>과거, 현재 그리고 앞으로 만들어 갈 풍경들</h1>
+
+		</div>
+
+		<div id='map_section' class="scroll_animation scroll_up section">
+			<h1 class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">오시는 길</h1>
+			<h3 class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">엘블레스</h3>
+			<p class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">서울특별시 서초구 강남대로 213 LL층</p>
+
+			<div id="daumRoughmapContainer1646099399130"
+				class="root_daum_roughmap root_daum_roughmap_landing scroll_animation scroll_up" data-sa-margin="300"
+				data-sa-delay="600">
+			</div>
+			<script charset="UTF-8" class="daum_roughmap_loader_script"
+				src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+			<script charset="UTF-8">
+				new daum.roughmap.Lander({
+					"timestamp": "1646099399130",
+					"key": "29bce",
+					"mapWidth": "540",
+					"mapHeight": "280"
+				}).render();
+			</script>
+
+
+			<button>네이버</button>
+			<button>T Map</button>
+			<button>Google</button>
+
+			<h4>지하철</h4>
+			<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
+			<h4>자가용</h4>
+			<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
+		</div>
+		<div id='pay_section' class="scroll_animation scroll_up">
+			<hr class="solid divider">
+			<h1>마음 전하실 곳</h1>
+			<button>신랑 측 계좌 번호</button>
+			<button>신부 측 계좌 번호</button>
+		</div>
+		<div id='message_section'>
+			<hr class="solid divider">
+			<h1>축하 메시지</h1>
+		</div>
+
+		<div id='footer_section'>
+			<p>카카오톡으로 청첩장 링크 공유하기</p>
+			<p>청첩장 url 복사하기</p>
+
+			<marquee scrolldelay='50' scrollmount='1000' direction="right">#성수그리고하진이 #짬바와클린이 #결혼 #10월2일 #12시30분
+				#엘블레스 #결혼식 #초대 #성수그리고하진이 #짬바와클린이 #결혼 #10월2일 #12시30분 #엘블레스 #결혼식 #초대
+			</marquee>
+
+			<p class="small_text">
+				성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요.
+			</p>
+			<p class="small_text">
+				Copyright 2022 짬바와 클린이(성수와 하진이). All right reserved
+			</p>
+
+		</div>
+	</center>
 </body>
 
 </html>
