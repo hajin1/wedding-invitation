@@ -1,153 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
-	<title>성수와 하진이의 결혼식에 초대합니다.</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- 부트스트랩 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+	<title>성수 그리고 하진이의 결혼식에 초대합니다.</title>
 </head>
 
 <body>
 	<center>
-		<div id="intro_section">
+		<!-- TODO 이미지 섹션, 모바일 환경에서는 width 100%로 할 것-->
+		<section>
 			<img id='intro_image' src="./images/intro_image.png" />
 
-			<p> <strong id="groom" class="name scroll_animation scroll_up" data-sa-delay="800">성수</strong>
-				<span class="scroll_animation scroll_up spaceText"
-					data-sa-delay="1500">&nbsp;&nbsp;그리고&nbsp;&nbsp;</span>
-				<strong class="name scroll_animation scroll_up" data-sa-delay="2200">하진</strong>
-			</p>
+			<a href="#intro_section" class="go_down">
+				<svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+					class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+				</svg>
+			</a>
+		</section>
 
-			<h1 class="scroll_animation scroll_up" data-sa-delay="3000">결혼합니다.</h1>
-		</div>
-
-		<div id="summary_section" class="section">
-			<hr class="solid divider">
-
-			<p class='scroll_animation scroll_up highlight' data-sa-margin="300" data-sa-delay="300">2022년 10월 2일,
-				일요일 오후 12시 30분</p>
-			<p class='scroll_animation scroll_up highlight' data-sa-delay="600">양재 엘블레스</p>
-		</div>
-
-		<div id="video_section" class="scroll_animation scroll_up section" data-sa-margin="300" data-sa-delay="300">
-			<h1 class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">초대 영상 보기</h1>
-
-			<iframe class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="1000" width="40%"
-				height="600" src="https://www.youtube.com/embed/sqgxcCjD04s?controls=0" title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
-
-			<div class="space"></div>
-
-			<p class="scroll_animation scroll_up" data-sa-margin="200" data-sa-delay="300"><strong class='name'>이영철
-					∙ 김봉옥</strong><span class='spaceText'>
-					의&nbsp;&nbsp;&nbsp;아들&nbsp;&nbsp;&nbsp;</span><strong class='name'>성수</strong></p>
-			<p class="scroll_animation scroll_up" data-sa-margin="200" data-sa-delay="600"><strong class='name'>김남규
-					∙ 김귀원</strong><span class='spaceText'>
-					의&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;</span><strong class='name'>하진</strong></p>
-		</div>
-
-		<div id='calendar_section' class="scroll_animation scroll_up section">
-			<h1>10월 2일</h1>
-			<h3>일요일, 오후 12시 30분</h3>
-
-			<ul class="weekdays">
-				<li>Su</li>
-				<li>Mo</li>
-				<li>Tu</li>
-				<li>We</li>
-				<li>Th</li>
-				<li>Fr</li>
-				<li>Sa</li>
-			</ul>
-
-			<ul class="days">
-				<li>9/18</li>
-				<li>19</li>
-				<li>20</li>
-				<li>21</li>
-				<li>22</li>
-				<li>23</li>
-				<li>24</li>
-				<li>25</li>
-				<li>26</li>
-				<li>27</li>
-				<li>28</li>
-				<li>29</li>
-				<li>30</li>
-				<li>10/1</li>
-				<li><span class="active">2</span></li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-				<li>6</li>
-				<li>7</li>
-				<li>8</li>
-				<li>9</li>
-				<li>10</li>
-				<li>11</li>
-				<li>12</li>
-				<li>13</li>
-				<li>14</li>
-				<li>15</li>
-				<li>16</li>
-				<li>17</li>
-				<li>18</li>
-				<li>19</li>
-				<li>20</li>
-				<li>21</li>
-				<li>22</li>
-			</ul>
-		</div>
-
-		<marquee scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'>xx</span>일 남았습니다.
-		</marquee>
-
-		<div id='picture_section' class="scroll_animation scroll_up section">
-			<h1>과거, 현재 그리고 앞으로 만들어 갈 풍경들</h1>
-
-		</div>
-
-		<div id='map_section' class="scroll_animation scroll_up section">
-			<h1 class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">오시는 길</h1>
-			<h3 class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">엘블레스</h3>
-			<p class="scroll_animation scroll_up" data-sa-margin="300" data-sa-delay="600">서울특별시 서초구 강남대로 213 LL층</p>
-
-			<div id="daumRoughmapContainer1646099399130"
-				class="root_daum_roughmap root_daum_roughmap_landing scroll_animation scroll_up" data-sa-margin="300"
-				data-sa-delay="600">
+		<section id="intro_section" class="name scroll_animation scroll_up">
+			<div>
+				<p> <strong class="name scroll_animation scroll_up" data-sa-delay="800">성수</strong>
+					<span class="scroll_animation scroll_up spaceText"
+						data-sa-delay="1500">&nbsp;&nbsp;그리고&nbsp;&nbsp;</span>
+					<strong class="name scroll_animation scroll_up" data-sa-delay="2200">하진</strong>
+					<span class="scroll_animation scroll_up spaceText" data-sa-delay="2600">이의 결혼식에 초대합니다.</span>
+				</p>
 			</div>
-			<script charset="UTF-8" class="daum_roughmap_loader_script"
-				src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+		</section>
 
-			<script charset="UTF-8">
-				new daum.roughmap.Lander({
-					"timestamp": "1646099399130",
-					"key": "29bce",
-					"mapWidth": "540",
-					"mapHeight": "280"
-				}).render();
-			</script>
+		<section id="summary_section" class="name scroll_animation scroll_up">
+			<div>
+				<p class='scroll_animation scroll_up highlight' data-sa-delay="500">2022년 10월 2일,
+					일요일 오후 12시 30분</p>
+				<p class='scroll_animation scroll_up highlight' data-sa-delay="1000">양재 엘블레스</p>
+			</div>
+		</section>
+
+		<section id="video_section" class="name scroll_animation scroll_up">
+			<div class="scroll_animation scroll_up" data-sa-delay="300">
+				<h1 class="scroll_animation scroll_up" data-sa-delay="600">초대 영상 보기</h1>
 
 
-			<button>네이버</button>
-			<button>T Map</button>
-			<button>Google</button>
+				<!-- TODO 모바일 환경에서 width 100%로 할 것-->
+				<iframe width="600" height="360" src="https://www.youtube.com/embed/sqgxcCjD04s"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
 
-			<h4>지하철</h4>
-			<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
-			<h4>자가용</h4>
-			<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
-		</div>
-		<div id='pay_section' class="scroll_animation scroll_up">
-			<hr class="solid divider">
-			<h1>마음 전하실 곳</h1>
-			<button>신랑 측 계좌 번호</button>
-			<button>신부 측 계좌 번호</button>
-		</div>
-		<div id='message_section'>
-			<hr class="solid divider">
-			<h1>축하 메시지</h1>
-		</div>
+				<div class="space"></div>
+
+				<p><strong class='name'>이영철
+						∙ 김봉옥</strong><span class='spaceText'>
+						의&nbsp;&nbsp;&nbsp;아들&nbsp;&nbsp;&nbsp;</span><strong class='name'>성수</strong></p>
+				<p><strong class='name'>김남규
+						∙ 김귀원</strong><span class='spaceText'>
+						의&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;</span><strong class='name'>하진</strong></p>
+			</div>
+		</section>
+
+		<section id='calendar_section' class="scroll_animation scroll_up">
+			<div class="scroll_animation scroll_up">
+				<h1>10월 2일</h1>
+				<h3>일요일, 오후 12시 30분</h3>
+				<!-- TODO 달력 추가 -->
+			</div>
+
+			<!-- TODO 날짜 계산해서 xx일에 표기, 날짜 색상은 붉은 색-->
+			<marquee scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'>xx</span>일 남았습니다.
+			</marquee>
+		</section>
+
+		<section id='picture_section' class="scroll_animation scroll_up">
+			<div class="scroll_animation scroll_up">
+				<h1>과거, 현재 그리고 앞으로 만들어 갈 풍경들</h1>
+
+				<div id="carouselExampleControls" class="carousel slide" data-interval="false">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="./images/intro_image.png" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+							<img src="./images/intro_image.png" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+							<img src="./images/intro_image.png" class="d-block w-100" alt="...">
+						</div>
+						<!-- TODO 더 많은 사진을 보고 싶으시면 -->
+						<div class="carousel-item">
+							<p>저희들의 더 많은 여정을 보고 싶으시면 <br>#짬바와클린이 인스타그램에서 보실 수 있어요.</p>
+							<marquee scrolldelay='10' scrollmount='200'>
+								<img class="marquee_image" src="https://www.instagram.com/p/CZv_vS3vFlr/">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+							</marquee>
+
+							<marquee scrolldelay='10' scrollmount='200' direction="right">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+								<img class="marquee_image" src="./images/intro_image.png">
+							</marquee>
+
+							<a href="https://www.instagram.com/jin_hiking_s2/">
+								<p>인스타 보러가기</p>
+							</a>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section id='map_section' class="scroll_animation scroll_up">
+			<div class="scroll_animation scroll_up">
+				<h1 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">오시는 길</h1>
+				<h3 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">엘블레스</h3>
+				<p class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">서울특별시 서초구 강남대로 213 LL층
+				</p>
+
+				<div id="daumRoughmapContainer1646099399130"
+					class="root_daum_roughmap root_daum_roughmap_landing scroll_animation scroll_up"
+					data-sa-margin="300" data-sa-delay="600">
+				</div>
+				<script charset="UTF-8" class="daum_roughmap_loader_script"
+					src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+				<script charset="UTF-8">
+					new daum.roughmap.Lander({
+						"timestamp": "1646099399130",
+						"key": "29bce",
+						"mapWidth": "540",
+						"mapHeight": "280"
+					}).render();
+				</script>
+
+
+				<button>네이버</button>
+				<button>T Map</button>
+				<button>Google</button>
+
+				<h4>지하철</h4>
+				<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
+				<h4>자가용</h4>
+				<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
+			</div>
+		</section>
+
+		<section>
+			<div id='pay_section' class="scroll_animation scroll_up">
+				<hr class="solid divider">
+				<h1>마음 전하실 곳</h1>
+				<button>신랑 측 계좌 번호</button>
+				<button>신부 측 계좌 번호</button>
+			</div>
+
+			<div id='message_section'>
+				<hr class="solid divider">
+				<h1>축하 메시지</h1>
+			</div>
+		</section>
+
+
 
 		<div id='footer_section'>
 			<p>카카오톡으로 청첩장 링크 공유하기</p>
@@ -158,14 +205,201 @@
 			</marquee>
 
 			<p class="small_text">
-				성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요.
-			</p>
-			<p class="small_text">
-				Copyright 2022 짬바와 클린이(성수와 하진이). All right reserved
+				성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요. <br> Copyright 2022 짬바와 클린이(성수와 하진이). All right
+				reserved
 			</p>
 
 		</div>
 	</center>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+
+	<!-- 꽃잎 효과 -->
+	<script type="text/javascript">
+		// Plugin code
+		(function ($) {
+			/** Polyfills and prerequisites **/
+
+			// requestAnimationFrame Polyfill
+			var lastTime = 0;
+			var vendors = ['webkit', 'o', 'ms', 'moz', ''];
+			var vendorCount = vendors.length;
+
+			for (var x = 0; x < vendorCount && !window.requestAnimationFrame; ++x) {
+				window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+				window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+			}
+
+			if (!window.requestAnimationFrame) {
+				window.requestAnimationFrame = function (callback) {
+					var currTime = new Date().getTime();
+					var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+
+					var id = window.setTimeout(function () { callback(currTime + timeToCall); }, timeToCall);
+					lastTime = currTime + timeToCall;
+
+					return id;
+				};
+			}
+
+			if (!window.cancelAnimationFrame) {
+				window.cancelAnimationFrame = function (id) {
+					clearTimeout(id);
+				};
+			}
+
+			// Prefixed event check
+			$.fn.prefixedEvent = function (type, callback) {
+				for (var x = 0; x < vendorCount; ++x) {
+					if (!vendors[x]) {
+						type = type.toLowerCase();
+					}
+
+					el = (this instanceof jQuery ? this[0] : this);
+					el.addEventListener(vendors[x] + type, callback, false);
+				}
+
+				return this;
+			};
+
+			// Test if element is in viewport
+			function elementInViewport(el) {
+
+				if (el instanceof jQuery) {
+					el = el[0];
+				}
+
+				var rect = el.getBoundingClientRect();
+
+				return (
+					rect.top >= 0 &&
+					rect.left >= 0 &&
+					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+					rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+				);
+			}
+
+			// Random array element
+			function randomArrayElem(arr) {
+				return arr[Math.floor(Math.random() * arr.length)];
+			}
+
+			// Random integer
+			function randomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			/** Actual plugin code **/
+			$.fn.sakura = function (event, options) {
+
+				// Target element
+				var target = this.selector == "" ? $('body') : this;
+
+				// Defaults for the option object, which gets extended below
+				var defaults = {
+					blowAnimations: ['blow-soft-left', 'blow-medium-left', 'blow-soft-right', 'blow-medium-right'],
+					className: 'sakura',
+					fallSpeed: 1,
+					maxSize: 14,
+					minSize: 10,
+					newOn: 300,
+					swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
+				};
+
+				var options = $.extend({}, defaults, options);
+
+				// Default or start event
+				if (typeof event === 'undefined' || event === 'start') {
+
+					// Set the overflow-x CSS property on the target element to prevent horizontal scrollbars
+					target.css({ 'overflow-x': 'hidden' });
+
+					// Function that inserts new petals into the document
+					var petalCreator = function () {
+						if (target.data('sakura-anim-id')) {
+							setTimeout(function () {
+								requestAnimationFrame(petalCreator);
+							}, options.newOn);
+						}
+
+						// Get one random animation of each type and randomize fall time of the petals
+						var blowAnimation = randomArrayElem(options.blowAnimations);
+						var swayAnimation = randomArrayElem(options.swayAnimations);
+						var fallTime = ((document.documentElement.clientHeight * 0.007) + Math.round(Math.random() * 5)) * options.fallSpeed;
+
+						// Build animation
+						var animations =
+							'fall ' + fallTime + 's linear 0s 1' + ', ' +
+							blowAnimation + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + randomInt(0, 20)) + 's linear 0s infinite' + ', ' +
+							swayAnimation + ' ' + randomInt(2, 4) + 's linear 0s infinite';
+
+						// Create petal and randomize size
+						var petal = $('<div class="' + options.className + '" />');
+						var height = randomInt(options.minSize, options.maxSize);
+						var width = height - Math.floor(randomInt(0, options.minSize) / 3);
+
+						// Apply Event Listener to remove petals that reach the bottom of the page
+						petal.prefixedEvent('AnimationEnd', function () {
+							if (!elementInViewport(this)) {
+								$(this).remove();
+							}
+						})
+							// Apply Event Listener to remove petals that finish their horizontal float animation
+							.prefixedEvent('AnimationIteration', function (ev) {
+								if (
+									(
+										$.inArray(ev.animationName, options.blowAnimations) != -1 ||
+										$.inArray(ev.animationName, options.swayAnimations) != -1
+									) &&
+									!elementInViewport(this)
+								) {
+									$(this).remove();
+								}
+							})
+							.css({
+								'-webkit-animation': animations,
+								animation: animations,
+								'border-radius': randomInt(options.maxSize, (options.maxSize + Math.floor(Math.random() * 10))) + 'px ' + randomInt(1, Math.floor(width / 4)) + 'px',
+								height: height + 'px',
+								left: (Math.random() * document.documentElement.clientWidth - 100) + 'px',
+								'margin-top': (-(Math.floor(Math.random() * 20) + 15)) + 'px',
+								width: width + 'px'
+							});
+
+						target.append(petal);
+					};
+
+					// Finally: Start adding petals
+					target.data('sakura-anim-id', requestAnimationFrame(petalCreator));
+
+				}
+				// Stop event, which stops the animation loop and removes all current blossoms
+				else if (event === 'stop') {
+
+					// Cancel animation
+					var animId = target.data('sakura-anim-id');
+
+					if (animId) {
+						cancelAnimationFrame(animId);
+						target.data('sakura-anim-id', null);
+					}
+
+					// Remove all current blossoms
+					setTimeout(function () {
+						$('.' + options.className).remove();
+					}, (options.newOn + 50));
+
+				}
+			};
+		}(jQuery));
+
+		$(document).ready(function () {
+			$('body').sakura();
+		});
+	</script>
 </body>
 
 </html>
