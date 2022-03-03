@@ -10,6 +10,7 @@ html, body {
     background-color: white;
     font-family: Verdana, sans-serif;
     scroll-behavior: smooth;
+    text-align: center;
 }
 
 * {box-sizing: border-box;}
@@ -126,7 +127,7 @@ marquee {
   display:-webkit-box;
   -webkit-box-pack:center;
   -webkit-box-align:center;
-  
+
 }
 
 .column_center {
@@ -194,7 +195,7 @@ marquee {
 #intro_image {
   width: 50%;
   height: auto;
-  display: block;  
+  display: block;
 
 }
 
@@ -211,7 +212,7 @@ marquee {
   width: 2rem;
   height: auto;
   position: absolute;
-  animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important; 
+  animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important;
 	-webkit-animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important;
   top: 90%;
 }
@@ -220,7 +221,7 @@ marquee {
 	0% {margin-top: 0px;}
 	100% {margin-top: 50px;}
 }
-   
+
 
 #video_section .space{
   margin-top: 10rem;
@@ -278,7 +279,7 @@ marquee {
   font-size: 2rem;
 }
 
-.spaceText {  
+.spaceText {
   font-size: 1.5rem;
 	color : rgb(201, 201, 201);
 }

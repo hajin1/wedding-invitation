@@ -6,281 +6,265 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- 부트스트랩 -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
 	<title>성수 그리고 하진이의 결혼식에 초대합니다.</title>
 </head>
 
 <body>
-	<center>
-		<!-- TODO 이미지 섹션, 모바일 환경에서는 width 100%로 할 것-->
-		<section>
-			<img id='intro_image' src="./images/intro_image.png" />
+	<!-- TODO 이미지 섹션, 모바일 환경에서는 width 100%로 할 것-->
+	<section>
+		<img id='intro_image' src="./images/intro_image.png" />
 
-			<a href="#summary_section" class="go_down">
-				<svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-					class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
-					<path fill-rule="evenodd"
-						d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-				</svg>
-			</a>
-		</section>
+		<a href="#summary_section" class="go_down">
+			<svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+				class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+				<path fill-rule="evenodd"
+					d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+			</svg>
+		</a>
+	</section>
 
-		<section id="summary_section" class="name scroll_animation scroll_up">
-			<div>
-				<p class='scroll_animation scroll_up highlight' data-sa-delay="500">2022년 10월 2일,
-					일요일 오후 12시 30분</p>
-				<p class='scroll_animation scroll_up highlight' data-sa-delay="1000">양재 엘블레스</p>
-			</div>
-		</section>
+	<section id="summary_section" class="name scroll_animation scroll_up">
+		<div>
+			<p class='scroll_animation scroll_up highlight' data-sa-delay="500">2022년 10월 2일,
+				일요일 오후 12시 30분</p>
+			<p class='scroll_animation scroll_up highlight' data-sa-delay="1000">양재 엘블레스</p>
+		</div>
+	</section>
 
-		<section id="intro_section" class="name scroll_animation scroll_up">
-			<div>
-				<p> <strong class="name scroll_animation scroll_up" data-sa-delay="800">성수</strong>
-					<span class="scroll_animation scroll_up spaceText"
-						data-sa-delay="1500">&nbsp;&nbsp;그리고&nbsp;&nbsp;</span>
-					<strong class="name scroll_animation scroll_up" data-sa-delay="2200">하진</strong>
-					<span class="scroll_animation scroll_up spaceText" data-sa-delay="2600">이의 결혼식에 초대합니다.</span>
-				</p>
-			</div>
-		</section>
+	<section id="intro_section" class="name scroll_animation scroll_up">
+		<div>
+			<p> <strong class="name scroll_animation scroll_up" data-sa-delay="800">성수</strong>
+				<span class="scroll_animation scroll_up spaceText"
+					data-sa-delay="1500">&nbsp;&nbsp;그리고&nbsp;&nbsp;</span>
+				<strong class="name scroll_animation scroll_up" data-sa-delay="2200">하진</strong>
+				<span class="scroll_animation scroll_up spaceText" data-sa-delay="2600">이의 결혼식에 초대합니다.</span>
+			</p>
+		</div>
+	</section>
 
+	<section id="video_section" class="name scroll_animation scroll_up">
+		<div class="scroll_animation scroll_up" data-sa-delay="300">
+			<h1 style="color: white;" class="scroll_animation scroll_up" data-sa-delay="600"><strong>초대 영상</strong>
+			</h1>
 
+			<h3 style="color:gainsboro;"> <strong>울산바위, 금강산, 소백산, 지리산에서 전하는 초대 메시지</strong></h3>
+			<!-- TODO 모바일 환경에서 width 100%로 할 것-->
+			<iframe class="video" src="https://www.youtube.com/embed/sqgxcCjD04s" title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
 
-		<section id="video_section" class="name scroll_animation scroll_up">
-			<div class="scroll_animation scroll_up" data-sa-delay="300">
-				<h1 style="color: white;" class="scroll_animation scroll_up" data-sa-delay="600"><strong>초대 영상</strong>
-				</h1>
+			<div class="space"></div>
 
-				<h3 style="color:gainsboro;"> <strong>울산바위, 금강산, 소백산, 지리산에서 전하는 초대 메시지</strong></h3>
-				<!-- TODO 모바일 환경에서 width 100%로 할 것-->
-				<iframe class="video" src="https://www.youtube.com/embed/sqgxcCjD04s" title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+			<p><strong class='name'>이영철
+					∙ 김봉옥</strong><span class='spaceText'>
+					의&nbsp;&nbsp;&nbsp;아들&nbsp;&nbsp;&nbsp;</span><strong class='name'>성수</strong></p>
+			<p><strong class='name'>김남규
+					∙ 김귀원</strong><span class='spaceText'>
+					의&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;</span><strong class='name'>하진</strong></p>
+		</div>
+	</section>
 
-				<div class="space"></div>
+	<section id='calendar_section' class="scroll_animation scroll_up">
+		<div class="scroll_animation scroll_up">
+			<h1 style="color: #F5C6AA;">10월 2일</h1>
+			<h3 style="color: #F8E2CF;">일요일, 오후 12시 30분</h3>
 
-				<p><strong class='name'>이영철
-						∙ 김봉옥</strong><span class='spaceText'>
-						의&nbsp;&nbsp;&nbsp;아들&nbsp;&nbsp;&nbsp;</span><strong class='name'>성수</strong></p>
-				<p><strong class='name'>김남규
-						∙ 김귀원</strong><span class='spaceText'>
-						의&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;</span><strong class='name'>하진</strong></p>
-			</div>
-		</section>
-
-		<section id='calendar_section' class="scroll_animation scroll_up">
-			<div class="scroll_animation scroll_up">
-				<h1 style="color: #F5C6AA;">10월 2일</h1>
-				<h3 style="color: #F8E2CF;">일요일, 오후 12시 30분</h3>
-
-				<div id="calendar">
-					<div id="calendar_header"><i class="icon-chevron-left"></i>
-						<h1></h1><i class="icon-chevron-right"></i>
-					</div>
-					<div id="calendar_weekdays"></div>
-					<div id="calendar_content"></div>
+			<div id="calendar">
+				<div id="calendar_header"><i class="icon-chevron-left"></i>
+					<h1></h1><i class="icon-chevron-right"></i>
 				</div>
+				<div id="calendar_weekdays"></div>
+				<div id="calendar_content"></div>
 			</div>
+		</div>
 
-			<!-- TODO 날짜 계산해서 xx일에 표기, 날짜 색상은 붉은 색-->
-			<marquee style="color: #F8E2CF;" scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'
-					style="color: pink">xx</span>일 남았습니다.
-			</marquee>
-		</section>
+		<!-- TODO 날짜 계산해서 xx일에 표기, 날짜 색상은 붉은 색-->
+		<marquee style="color: #F8E2CF;" scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'
+				style="color: pink">xx</span>일 남았습니다.
+		</marquee>
+	</section>
 
-		<section id='picture_section' class="scroll_animation scroll_up">
-			<div class="scroll_animation scroll_up">
-				<h1 style="color: white; margin: 2rem;"><strong>과거, 현재</strong></h1>
-				<h1 style="color: white; margin: 2rem;"><strong>그리고 앞으로 <span style="color:hotpink;">함께</span> 만들어 갈
-						풍경들</strong></h1>
+	<section id='picture_section' class="scroll_animation scroll_up">
+		<div class="scroll_animation scroll_up">
+			<h1 style="color: white; margin: 2rem;"><strong>과거, 현재</strong></h1>
+			<h1 style="color: white; margin: 2rem;"><strong>그리고 앞으로 <span style="color:hotpink;">함께</span> 만들어 갈
+					풍경들</strong></h1>
+
+			<hr class="solid">
+
+			<!-- marquee의 사진 클릭 시 해당 사진이 들어가도록 구현-->
+			<div class="marquee">
+				<div class="track left">
+					<div class="content">
+						<input id="myBtn" type="image" class="center-cropped-20" value="0"
+							src="https://music-phinf.pstatic.net/20210826_284/1629967607928B5X2v_PNG/VIBE_%B0%F8%C5%EB_%B7%AF%B4%D7%C7%D2%B6%A7.png" />
+						<input type="image" class="center-cropped-30 modalBtn"
+							src="https://music-phinf.pstatic.net/20210826_18/1629967928785VjsLf_PNG/VIBE_%B0%F8%C5%EB_%B9%CC%B4%CF%C8%A8%C7%C7BGM.png" />
+						<input type="image" class="center-cropped-25 modalBtn"
+							src="https://music-phinf.pstatic.net/20210830_183/16303126589614OdSP_PNG/VIBE_WORKSTUDY_Lo-fi.png" />
+						<input type="image" class="center-cropped-20 modalBtn"
+							src="https://music-phinf.pstatic.net/20220228_130/1646046142888Fu9Ro_PNG/1112222333.png" />
+						<input type="image" class="center-cropped-30 modalBtn"
+							src="https://music-phinf.pstatic.net/20210825_94/1629880132986WGj43_GIF/VIBE_%C2%F7%C6%AE%B6%D5%B0%ED%B1%DE%BB%F3%BD%C2_450x450.gif" />
+						<input type="image" class="center-cropped-25 modalBtn"
+							src="https://music-phinf.pstatic.net/20210826_177/162996586293437OB6_PNG/VIBE_BGM_10%BD%C3%B0%A3%B3%D1%B0%D4ChilloutJazz.png" />
+						<input type="image" class="center-cropped-25 modalBtn"
+							src="https://music-phinf.pstatic.net/20210826_297/1629958135569rE3M5_PNG/VIBE_BGM_%C7%CF%B7%E7%C1%BE%C0%CF-%C6%B2%BE%EE%B3%F5%B4%C2-Lo-Fi.png" />
+					</div>
+				</div>
 
 				<hr class="solid">
 
-				<!-- marquee의 사진 클릭 시 해당 사진이 들어가도록 구현-->
-				<div class="marquee">
-					<div class="track left">
-						<div class="content">
-							<input id="myBtn" type="image" class="center-cropped-20" value="0"
-								src="https://music-phinf.pstatic.net/20210826_284/1629967607928B5X2v_PNG/VIBE_%B0%F8%C5%EB_%B7%AF%B4%D7%C7%D2%B6%A7.png" />
-							<input type="image" class="center-cropped-30 modalBtn"
-								src="https://music-phinf.pstatic.net/20210826_18/1629967928785VjsLf_PNG/VIBE_%B0%F8%C5%EB_%B9%CC%B4%CF%C8%A8%C7%C7BGM.png" />
-							<input type="image" class="center-cropped-25 modalBtn"
-								src="https://music-phinf.pstatic.net/20210830_183/16303126589614OdSP_PNG/VIBE_WORKSTUDY_Lo-fi.png" />
-							<input type="image" class="center-cropped-20 modalBtn"
-								src="https://music-phinf.pstatic.net/20220228_130/1646046142888Fu9Ro_PNG/1112222333.png" />
-							<input type="image" class="center-cropped-30 modalBtn"
-								src="https://music-phinf.pstatic.net/20210825_94/1629880132986WGj43_GIF/VIBE_%C2%F7%C6%AE%B6%D5%B0%ED%B1%DE%BB%F3%BD%C2_450x450.gif" />
-							<input type="image" class="center-cropped-25 modalBtn"
-								src="https://music-phinf.pstatic.net/20210826_177/162996586293437OB6_PNG/VIBE_BGM_10%BD%C3%B0%A3%B3%D1%B0%D4ChilloutJazz.png" />
-							<input type="image" class="center-cropped-25 modalBtn"
-								src="https://music-phinf.pstatic.net/20210826_297/1629958135569rE3M5_PNG/VIBE_BGM_%C7%CF%B7%E7%C1%BE%C0%CF-%C6%B2%BE%EE%B3%F5%B4%C2-Lo-Fi.png" />
-						</div>
-					</div>
+				<p style="color: whitesmoke;">※ 사진을 클릭하시면 더 크게 볼 수 있어요.</p>
 
-					<hr class="solid">
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
 
-					<p style="color: whitesmoke;">※ 사진을 클릭하시면 더 크게 볼 수 있어요.</p>
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
 
-					<!-- The Modal -->
-					<div id="myModal" class="modal">
-
-						<!-- Modal content -->
-						<div class="modal-content">
-							<span class="close">&times;</span>
-
-							<div id="carouselExampleControls" class="carousel slide" data-interval="false">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="./images/intro_image.png" class="d-block w-50" alt="...">
-									</div>
-									<div class="carousel-item">
-										<img src="./images/intro_image.png" class="d-block w-50" alt="...">
-									</div>
-									<div class="carousel-item">
-										<img src="./images/intro_image.png" class="d-block w-50" alt="...">
-									</div>
+						<div id="carouselExampleControls" class="carousel slide" data-interval="false">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="./images/intro_image.png" class="d-block w-50" alt="...">
 								</div>
-								<button class="carousel-control-prev" type="button"
-									data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Previous</span>
-								</button>
-								<button class="carousel-control-next" type="button"
-									data-bs-target="#carouselExampleControls" data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Next</span>
-								</button>
+								<div class="carousel-item">
+									<img src="./images/intro_image.png" class="d-block w-50" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="./images/intro_image.png" class="d-block w-50" alt="...">
+								</div>
 							</div>
+							<button class="carousel-control-prev" type="button"
+								data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button"
+								data-bs-target="#carouselExampleControls" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
 						</div>
-
-					</div>
-				</div>
-		</section>
-
-		<section id="insta_section" class="scroll_animation scroll_up">
-			<div class="scroll_animation scroll_up">
-				<h1 style="color: white; margin: 2rem;">
-					<strong>저희들의 더 많은 여정이 궁금하시다면 <br>
-						<span style="color:hotpink;">#짬바와클린이 </span>
-						instagram에서 보실 수 있어요.</strong>
-				</h1>
-
-				<a href="https://www.instagram.com/jin_hiking_s2/" style="color: whitesmoke;">
-					instagram 구경가기
-					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="whitesmoke"
-						class="bi bi-instagram" viewBox="0 0 16 16">
-						<path
-							d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-					</svg>
-				</a>
-
-
-				<div class="row" style="margin-top: 5rem;">
-					<div class="column">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_4.6464422f.png">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_3.9c6e965f.png">
-					</div>
-					<div class=" column">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_8.e080b7e5.png">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_2.ecf85914.png">
-					</div>
-					<div class="column">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_1.7a3e36a0.png">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_7.99f9a68c.png">
-					</div>
-					<div class="column_center">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_0.3a8f5003.png">
 					</div>
 
-					<div class="column">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_5.bf56eb35.png">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_2.ecf85914.png">
-					</div>
-					<div class="column">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_12.be5b4d37.png">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_6.993b5bd2.png">
-					</div>
-					<div class="column">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_16.62f787d6.png">
-						<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_14.89a7661c.png">
-					</div>
 				</div>
 			</div>
-		</section>
+	</section>
 
+	<section id="insta_section" class="scroll_animation scroll_up">
+		<div class="scroll_animation scroll_up">
+			<h1 style="color: white; margin: 2rem;">
+				<strong>저희들의 더 많은 여정이 궁금하시다면 <br>
+					<span style="color:hotpink;">#짬바와클린이 </span>
+					instagram에서 보실 수 있어요.</strong>
+			</h1>
 
-		<section id='map_section' class="scroll_animation scroll_up">
-			<div class="scroll_animation scroll_up">
-				<h1 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600" style="margin: 5rem;">
-					오시는 길</h1>
-				<h3 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">엘블레스</h3>
-				<p class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">서울특별시 서초구 강남대로 213 LL층
-				</p>
+			<a href="https://www.instagram.com/jin_hiking_s2/" style="color: whitesmoke;">
+				instagram 구경가기
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="whitesmoke"
+					class="bi bi-instagram" viewBox="0 0 16 16">
+					<path
+						d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+				</svg>
+			</a>
 
-				<div id="daumRoughmapContainer1646099399130"
-					class="root_daum_roughmap root_daum_roughmap_landing scroll_animation scroll_up"
-					data-sa-margin="300" data-sa-delay="600" style="margin: 3rem;">
+			<div class="row" style="margin-top: 5rem;">
+				<div class="column">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_4.6464422f.png">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_3.9c6e965f.png">
 				</div>
-				<script charset="UTF-8" class="daum_roughmap_loader_script"
-					src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+				<div class=" column">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_8.e080b7e5.png">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_2.ecf85914.png">
+				</div>
+				<div class="column">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_1.7a3e36a0.png">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_7.99f9a68c.png">
+				</div>
+				<div class="column_center">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_0.3a8f5003.png">
+				</div>
 
-				<script charset="UTF-8">
-					new daum.roughmap.Lander({
-						"timestamp": "1646099399130",
-						"key": "29bce",
-						"mapWidth": "1000",
-						"mapHeight": "500"
-					}).render();
-				</script>
-
-				<h4>지하철</h4>
-				<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
-				<h4>자가용</h4>
-				<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
+				<div class="column">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_5.bf56eb35.png">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_2.ecf85914.png">
+				</div>
+				<div class="column">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_12.be5b4d37.png">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_6.993b5bd2.png">
+				</div>
+				<div class="column">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_16.62f787d6.png">
+					<img src="https://vibe.naver.com/20220224150725_resources/img/img_audio_14.89a7661c.png">
+				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section id='pay_section'>
-			<div class="scroll_animation scroll_up">
-				<h1>마음 전하실 곳</h1>
-				<button>신랑 측 계좌 번호</button>
-				<button>신부 측 계좌 번호</button>
-			</div>
-
-			<div id='message_section'>
-				<hr class="solid divider">
-				<h1>축하 메시지</h1>
-			</div>
-		</section>
-
-
-
-		<div id='footer_section'>
-			<p>카카오톡으로 청첩장 링크 공유하기</p>
-			<p>청첩장 url 복사하기</p>
-
-			<marquee scrolldelay='50' scrollmount='1000' direction="right">#성수그리고하진이 #짬바와클린이 #결혼 #10월2일 #12시30분
-				#엘블레스 #결혼식 #초대 #성수그리고하진이 #짬바와클린이 #결혼 #10월2일 #12시30분 #엘블레스 #결혼식 #초대
-			</marquee>
-
-			<p class="small_text">
-				성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요. <br> Copyright 2022 짬바와 클린이(성수와 하진이). All right
-				reserved
+	<section id='map_section' class="scroll_animation scroll_up">
+		<div class="scroll_animation scroll_up">
+			<h1 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600" style="margin: 5rem;">
+				오시는 길</h1>
+			<h3 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">엘블레스</h3>
+			<p class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">서울특별시 서초구 강남대로 213 LL층
 			</p>
 
-		</div>
-	</center>
+			<div id="daumRoughmapContainer1646099399130"
+				class="root_daum_roughmap root_daum_roughmap_landing scroll_animation scroll_up"
+				data-sa-margin="300" data-sa-delay="600" style="margin: 3rem;">
+			</div>
+			<script charset="UTF-8" class="daum_roughmap_loader_script"
+				src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
+			<script charset="UTF-8">
+				new daum.roughmap.Lander({
+					"timestamp": "1646099399130",
+					"key": "29bce",
+					"mapWidth": "1000",
+					"mapHeight": "500"
+				}).render();
+			</script>
+
+			<h4>지하철</h4>
+			<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
+			<h4>자가용</h4>
+			<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
+		</div>
+	</section>
+
+	<section id='pay_section'>
+		<div class="scroll_animation scroll_up">
+			<h1>마음 전하실 곳</h1>
+			<button>신랑 측 계좌 번호</button>
+			<button>신부 측 계좌 번호</button>
+		</div>
+
+		<div id='message_section'>
+			<hr class="solid divider">
+			<h1>축하 메시지</h1>
+		</div>
+	</section>
+
+	<div id='footer_section'>
+		<p>카카오톡으로 청첩장 링크 공유하기</p>
+		<p>청첩장 url 복사하기</p>
+
+		<marquee scrolldelay='50' scrollmount='1000' direction="right">#성수그리고하진이 #짬바와클린이 #결혼 #10월2일 #12시30분
+			#엘블레스 #결혼식 #초대 #성수그리고하진이 #짬바와클린이 #결혼 #10월2일 #12시30분 #엘블레스 #결혼식 #초대
+		</marquee>
+
+		<p class="small_text">
+			성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요. <br> Copyright 2022 짬바와 클린이(성수와 하진이). All right
+			reserved
+		</p>
+	</div>
 
 
 	<!-- 꽃잎 효과 -->
@@ -465,7 +449,6 @@
 		$(document).ready(function () {
 			$('body').sakura();
 		});
-
 	</script>
 </body>
 
