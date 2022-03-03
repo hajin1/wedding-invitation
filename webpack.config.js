@@ -28,15 +28,15 @@ module.exports = (env, argv) => {
                     ]
                 },
                 {
-                    test: /\.png$/,
+                    test: /\.(png)$/,
                     use: [
                         {
                             loader: "file-loader",
-                            options:{
+                            options: {
                                 outputPath: './images',
-                                name:'[name].[ext]'
-                        }
-                    }]
+                                name: '[name].[ext]'
+                            }
+                        }]
                 }
             ]
         },
