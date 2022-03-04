@@ -9,10 +9,34 @@ export default class App {
     constructor() {
         const img = introImg;
 
-
-
-
         this.init();
+        this.bindSmoothEffect();
+    }
+
+    bindSmoothEffect() {
+        const elements = document.querySelectorAll('[data-smooth]');
+
+        let options = {
+            rootMargin: '0px',
+            threshold: 0.1
+        }
+
+        elements.forEach((element) => {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        console.log(entry);
+
+                        entry.target.classList.remove('show');
+                    }
+                })
+            }, options);
+            observer.observe(element);
+        });
+
+
 
     }
 
@@ -43,7 +67,7 @@ export default class App {
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on the button, open the modal 
+        // When the user clicks on the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
         }
@@ -61,9 +85,6 @@ export default class App {
         }
 
         window.addEventListener("scroll", reveal);
-
-        window.addEventListener('load', scrollAnimationFunction);
-        window.addEventListener('scroll', scrollAnimationFunction);
     }
 
 

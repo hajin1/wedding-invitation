@@ -38,6 +38,17 @@ a{
   text-decoration:none;
 }
 
+.section [data-smooth].show {
+  opacity: 1;
+  transform: translate(0px, -100px);
+}
+
+.section [data-smooth] {
+  opacity: 0;
+  transition: opacity 400ms ease-out,transform 400ms ease-in-out;
+  // transition: opacity 400ms ease-out;
+}
+
 input{
   vertical-align: middle;
 }
@@ -267,7 +278,7 @@ marquee {
 
 #story_section .name{
   font-size:2rem;
-  color : $font-color
+  color : $font-color;
 }
 
 .highlight {
