@@ -17,8 +17,12 @@ html, body {
 ul {list-style-type: none;}
 
 
-h1, h3 {
+h1{
   color: $font-color;
+}
+
+h3{
+  color: gray;
 }
 
 h4 {
@@ -190,10 +194,8 @@ marquee {
 
 //calendar
 
-
-
 #intro_image {
-  width: 50%;
+  width: 40%;
   height: auto;
   display: block;
 
@@ -209,12 +211,12 @@ marquee {
 }
 
 .go_down{
-  width: 2rem;
+  text-align: center;
   height: auto;
   position: absolute;
   animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important;
 	-webkit-animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important;
-  top: 90%;
+  top: 85%;
 }
 
  @keyframes motion {
@@ -257,17 +259,6 @@ marquee {
 
 .small_text{
   font-size: 10px;
-}
-
-#intro_section, #summary_section {
-  display: flex;
-  justify-content: center;
-  background-color: #F6F6F6;
-}
-
-#intro_section .name {
-	font-size:4rem;
-    color : $font-color
 }
 
 #video_section .name{
