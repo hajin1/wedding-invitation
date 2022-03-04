@@ -85,7 +85,7 @@
 		<img style="width: 50%;"
 			src="https://www.apple.com/v/iphone-13/d/images/overview/cameragallery/memories_bg_static__bk2bp5icr7xy_large_2x.jpg">
 
-		<h6 style="color: gray; text-align: center;">저희 결혼식에 오셔서 <br>축하해 주시면 더없이 행복하겠습니다. </h6>
+		<h6 style="color: gray; text-align: center; margin-top: 2rem;">저희 결혼식에 오셔서 <br>축하해 주시면 더없이 행복하겠습니다. </h6>
 
 		<div style="margin: 10rem;">
 			<p><strong class='name'>이영철
@@ -98,28 +98,54 @@
 		</div>
 	</div>
 
-	<section id='calendar_section' class="scroll_animation scroll_up">
-		<div class="scroll_animation scroll_up">
-			<h1 style="color: #F5C6AA;">10월 2일</h1>
-			<h3 style="color: #F8E2CF;">일요일, 오후 12시 30분</h3>
-
-			<div id="calendar">
-				<div id="calendar_header"><i class="icon-chevron-left"></i>
-					<h1></h1><i class="icon-chevron-right"></i>
-				</div>
-				<div id="calendar_weekdays"></div>
-				<div id="calendar_content"></div>
+	<section id='calendar_section'>
+		<div style="width: 50%;">
+			<div>
+				<h1 style="margin: 5rem;">
+					날짜</h1>
+				<h3>10월 2일</h3>
+				<p>일요일, 오후 12시 30분
+				</p>
 			</div>
 		</div>
 
-		<!-- TODO 날짜 계산해서 xx일에 표기, 날짜 색상은 붉은 색-->
-		<marquee style="color: #F8E2CF;" scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'
-				style="color: pink">xx</span>일 남았습니다.
-		</marquee>
+		<div style="width: 50%;">
+			<h1 style="margin: 5rem;">
+				오시는 길</h1>
+			<h3>엘블레스</h3>
+			<p>서울특별시 서초구 강남대로 213 LL층
+			</p>
+
+			<div id="daumRoughmapContainer1646099399130" class="root_daum_roughmap root_daum_roughmap_landing"
+				data-sa-delay="600" style="margin: 3rem;">
+			</div>
+			<script charset="UTF-8" class="daum_roughmap_loader_script"
+				src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+			<script charset="UTF-8">
+				new daum.roughmap.Lander({
+					"timestamp": "1646099399130",
+					"key": "29bce",
+					"mapWidth": "500",
+					"mapHeight": "270"
+				}).render();
+			</script>
+
+			<h4>지하철</h4>
+			<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
+			<h4>자가용</h4>
+			<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
+		</div>
 	</section>
 
-	<section id='picture_section' class="scroll_animation scroll_up">
-		<div class="scroll_animation scroll_up">
+
+	<!-- TODO 날짜 계산해서 xx일에 표기, 날짜 색상은 붉은 색-->
+	<marquee style="color: gray;" scrolldelay='50' scrollmount='1000'>성수 ❤︎ 하진이의 결혼식이 <span class='day'
+			style="color: pink">xx</span>일 남았습니다.
+	</marquee>
+
+	<section id='picture_section'>
+		<div>
 			<h1 style="color: white; margin: 2rem;"><strong>과거, 현재</strong></h1>
 			<h1 style="color: white; margin: 2rem;"><strong>그리고 앞으로 <span style="color:hotpink;">함께</span> 만들어 갈
 					풍경들</strong></h1>
@@ -187,8 +213,8 @@
 			</div>
 	</section>
 
-	<section id="insta_section" class="scroll_animation scroll_up">
-		<div class="scroll_animation scroll_up">
+	<section id="insta_section">
+		<div>
 			<h1 style="color: white; margin: 2rem;">
 				<strong>저희들의 더 많은 여정이 궁금하시다면 <br>
 					<span style="color:hotpink;">#짬바와클린이 </span>
@@ -237,39 +263,8 @@
 		</div>
 	</section>
 
-	<section id='map_section' class="scroll_animation scroll_up">
-		<div class="scroll_animation scroll_up">
-			<h1 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600" style="margin: 5rem;">
-				오시는 길</h1>
-			<h3 class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">엘블레스</h3>
-			<p class="scroll_animation scroll_up" data-sa-margin="-200" data-sa-delay="600">서울특별시 서초구 강남대로 213 LL층
-			</p>
-
-			<div id="daumRoughmapContainer1646099399130"
-				class="root_daum_roughmap root_daum_roughmap_landing scroll_animation scroll_up" data-sa-margin="300"
-				data-sa-delay="600" style="margin: 3rem;">
-			</div>
-			<script charset="UTF-8" class="daum_roughmap_loader_script"
-				src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-			<script charset="UTF-8">
-				new daum.roughmap.Lander({
-					"timestamp": "1646099399130",
-					"key": "29bce",
-					"mapWidth": "1000",
-					"mapHeight": "500"
-				}).render();
-			</script>
-
-			<h4>지하철</h4>
-			<p>[3호선, 신분당선] <strong>양재역</strong>(서초구청) 9번 출구 <span class="small_text">※출구와 연결됨</span></p>
-			<h4>자가용</h4>
-			<p><strong>양재 주차 빌딩</strong> 2시간 무료 주차 <span class="small_text">※식장 옆 건물</span></p>
-		</div>
-	</section>
-
 	<section id='pay_section'>
-		<div class="scroll_animation scroll_up">
+		<div>
 			<h1>마음 전하실 곳</h1>
 			<button>신랑 측 계좌 번호</button>
 			<button>신부 측 계좌 번호</button>

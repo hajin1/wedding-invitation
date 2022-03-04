@@ -192,8 +192,6 @@ marquee {
   cursor: pointer;
 }
 
-//calendar
-
 #intro_image {
   width: 40%;
   height: auto;
@@ -229,9 +227,15 @@ marquee {
   margin-top: 10rem;
 }
 
-
-#map_section, #pay_section, #calendar_section{
+#pay_section{
   background-color: $background-color;
+}
+
+#calendar_section {
+  background-color: $background-color;
+  flex-direction: row;
+  padding-right: 10%;
+  padding-left: 10%
 }
 
 #video_section{
@@ -261,9 +265,9 @@ marquee {
   font-size: 10px;
 }
 
-#video_section .name{
+#story_section .name{
   font-size:2rem;
-  color : white
+  color : $font-color
 }
 
 .highlight {
@@ -275,33 +279,13 @@ marquee {
 	color : rgb(201, 201, 201);
 }
 
-#video_section .spaceText {
+#story_section .spaceText {
   font-size: 1rem;
-	color : whitesmoke;
+	color : gray;
 }
 
 .divider{
   width : 40px;
-}
-
-/* Scroll Animation */
-.scroll_animation {
-  opacity: 0;
-}
-
-.scroll_animation.scroll_up  {
-  transition: all 0.5s ease;
-  transform: translate(0, 50px);
-}
-
-.scroll_animation.scroll_right {
-  transition: all 0.5s ease;
-  transform: translate(-100px, 0);
-}
-
-.scroll_animation.show {
-  opacity: 1;
-  transform: none;
 }
 
 section{
