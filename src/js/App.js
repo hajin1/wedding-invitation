@@ -1,16 +1,13 @@
 import '../scss/style.scss';
 import introImg from '../../images/intro_image.png';
-// import img1 from '../../images/marquee_1.jpeg';
-// import img2 from '../../images/marquee_2.jpeg';
-// import img3 from '../../images/marquee_3.jpeg';
-// import img4 from '../../images/marquee_4.jpeg';
+import Marquee from './Marquee';
 
 export default class App {
     constructor() {
-        const img = introImg;
-
-        this.init();
+        // this.init();
         this.bindSmoothEffect();
+        this.marquee = new Marquee();
+        this.marquee.renderMarquee();
     }
 
     bindSmoothEffect() {
@@ -27,37 +24,15 @@ export default class App {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('show');
                     } else {
-                        console.log(entry);
-
                         entry.target.classList.remove('show');
                     }
                 })
             }, options);
             observer.observe(element);
         });
-
-
-
     }
 
-
     init() {
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 5;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-
         // Get the modal
         var modal = document.getElementById("myModal");
 
@@ -83,8 +58,6 @@ export default class App {
                 modal.style.display = "none";
             }
         }
-
-        window.addEventListener("scroll", reveal);
     }
 
 

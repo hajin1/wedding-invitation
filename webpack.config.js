@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
                     ]
                 },
                 {
-                    test: /\.(png)$/,
+                    test: /\.(png|jpeg)$/,
                     use: [
                         {
                             loader: "file-loader",
