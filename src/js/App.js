@@ -1,6 +1,7 @@
 import '../scss/style.scss';
 import introImg from '../../images/intro_image.png';
 import Marquee from './Marquee';
+import 'bootstrap';
 
 export default class App {
     constructor() {

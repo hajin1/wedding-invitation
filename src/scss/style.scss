@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 $primary-color :  #F5C6AA;
 $secendary-color : #FDF6F0;
 $thirdary-color : #F8E2CF;
@@ -12,6 +14,90 @@ html, body {
     scroll-behavior: smooth;
     text-align: center;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#root {
+ display: flex;
+ justify-content: center;
+}
+
+.app {
+  max-width: 100%;
+}
+
+.intro_section{
+  // justify-content:center;
+
+  h1 {
+    margin-top: 2rem;
+  }
+}
+
+#story_section {
+  padding-top: 100px;
+  .name{
+    font-size:2rem;
+    color : $font-color;
+  }
+
+  .spaceText {
+    font-size: 1rem;
+    color : gray;
+  }
+
+  .img-30{
+    width: 100%;
+  }
+
+  .div-50 {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .img-100 {
+    width: 100%;
+  }
+
+  .img2-description {
+    color: grey;
+    text-align: start;
+    margin-left: 1rem;
+  }
+}
+
+
+@include media-breakpoint-up(lg) {
+  .app {
+    max-width: 80rem;
+  }
+  #intro_image {
+    width: 40%;
+  }
+
+  #story_section {
+    .img-30 {
+      width: 30%;
+      margin-left: 25%;
+    }
+
+    .div-50 {
+      width: 50%;
+    }
+
+    .img-100 {
+      width: 100%;
+    }
+
+    .img2-tag {
+      margin-right: 25%;
+    }
+  }
+
+ }
 
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
@@ -46,7 +132,6 @@ a{
 .section [data-smooth] {
   opacity: 0;
   transition: opacity 400ms ease-out,transform 400ms ease-in-out;
-  // transition: opacity 400ms ease-out;
 }
 
 input{
@@ -98,7 +183,7 @@ marquee {
     border-radius: 70px;
   }
 
-  
+
 }
 
 @keyframes marquee_right {
@@ -220,13 +305,6 @@ marquee {
   cursor: pointer;
 }
 
-#intro_image {
-  width: 40%;
-  height: auto;
-  display: block;
-
-}
-
 #summary_section p{
   margin: auto;
 }
@@ -242,7 +320,7 @@ marquee {
   position: absolute;
   animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important;
 	-webkit-animation: motion 0.6s linear 0s infinite alternate; padding-top: 0 !important;
-  top: 85%;
+  top: calc(100% - 150px);
 }
 
  @keyframes motion {
@@ -293,11 +371,6 @@ marquee {
   font-size: 10px;
 }
 
-#story_section .name{
-  font-size:2rem;
-  color : $font-color;
-}
-
 .highlight {
   font-size: 2rem;
 }
@@ -305,11 +378,6 @@ marquee {
 .spaceText {
   font-size: 1.5rem;
 	color : rgb(201, 201, 201);
-}
-
-#story_section .spaceText {
-  font-size: 1rem;
-	color : gray;
 }
 
 .divider{
