@@ -5,8 +5,8 @@ import img4 from '../../images/marquee_4.jpeg';
 import img5 from '../../images/marquee_5.jpeg';
 import img6 from '../../images/marquee_6.jpeg';
 import '../scss/style.scss';
-var imageSize = ['center-cropped-20', 'center-cropped-25', 'center-cropped-30']
-
+var imageSize = ['center-cropped-small', 'center-cropped-middle', 'center-cropped-big']
+var previous = 4;
 
 export default class Marquee {
     constructor() {
@@ -37,10 +37,17 @@ class Image {
     getElement() {
         const img = document.createElement('img');
         img.setAttribute('src', this.src);
-        img.classList.add(imageSize[Math.floor(Math.random() * 3)]);
+
+        var random = Math.floor(Math.random() * 3);
+
+        if (previous === random)
+            random = (random + 1) % 3;
+
+        img.classList.add(imageSize[random]);
         img.classList.add('modalBtn');
         img.addEventListener('click', this.onClick);
 
+        previous = random;
         return img;
     }
 }
