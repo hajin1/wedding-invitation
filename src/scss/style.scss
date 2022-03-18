@@ -40,13 +40,17 @@ img {
 #story_section {
   padding-top: 100px;
 
+  h1{
+    color: whitesmoke;
+  }
+
   h6 {
-    color: gray;
+    color: whitesmoke;
   }
 
   .name{
     font-size:2rem;
-    color : $font-color;
+    color : gainsboro;
   }
 
   .spaceText {
@@ -85,7 +89,6 @@ img {
   }
 
   .img1-description {
-    color: grey;
     text-align: start;
     margin-left: 1rem;
   }
@@ -120,6 +123,11 @@ img {
   object-fit:cover;
 }
 
+#video_frame{
+  width: 400px;
+  height: 270px;
+}
+
 
 @include media-breakpoint-up(lg) {
   #intro_image {
@@ -127,6 +135,8 @@ img {
   }
 
   #story_section {
+    z-index: 2;
+
     h6 {
       color: gray;
     }
@@ -178,6 +188,15 @@ img {
       background-color: $background-color;
       padding-right: 10%;
       padding-left: 10%
+    }
+
+    #story_background {
+      padding-bottom: 30%;
+    }
+
+    #video_frame{
+      width: 1120px;
+      height: 630px;
     }
   }
 
@@ -334,7 +353,6 @@ marquee {
   display:-webkit-box;
   -webkit-box-pack:center;
   -webkit-box-align:center;
-
 }
 
 .column_center {

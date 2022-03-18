@@ -28,7 +28,7 @@
 					</svg>
 				</a>
 			</section>
-			<div id="story_section" class="section">
+			<div id="story_section" class="section" style="background-color: #3E60A0;">
 				<h1 data-smooth style="margin-top: 10%; margin-bottom: 3rem;">저희의 <span
 						style="color:aquamarine;">이야기</span>를 들려드릴게요.</h1>
 
@@ -88,18 +88,19 @@
 				<img data-smooth id="img6"
 					src="https://www.apple.com/v/iphone-13/d/images/overview/cameragallery/memories_bg_static__bk2bp5icr7xy_large_2x.jpg">
 
-				<h6 data-smooth style="margin: 2rem;">그리고, 앞으로도 평생 함께하기로 약속했습니다.</h6>
+				<h6 data-smooth style="margin: 2rem;">그리고, 앞으로도 <span style="color: darkorange;">평생</span> 함께하기로 약속했습니다.
+				</h6>
 
-				<h6 data-smooth style="margin: 2rem;">저희 결혼식에 오셔서 <br>축하해 주시면 더없이 행복하겠습니다.
+				<h6 data-smooth style="margin: 2rem;">저희 <span style="color: darkslateblue;">결혼식</span>에 오셔서 <br>축하해 주시면
+					더없이 행복하겠습니다.
 				</h6>
 
 
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/sqgxcCjD04s?controls=0"
-					title="YouTube video player" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+				<h1>초대 영상 보기</h1>
+				<iframe id="video_frame" src="https://www.youtube.com/embed/WUaBlwl4X3M?controls=0" title="초대합니다."
+					frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe>
 
-				<div style="margin-top: 10rem; margin-bottom: 10rem;">
+				<div style="margin-top: 10rem; margin-bottom: 10rem; z-index: 2;">
 					<p><strong class='name'>이영철
 							∙ 김봉옥</strong><span class='spaceText'>
 							의&nbsp;&nbsp;&nbsp;아들&nbsp;&nbsp;&nbsp;</span><strong class='name'>성수</strong></p>
@@ -108,9 +109,11 @@
 							의&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;</span><strong class='name'>하진</strong></p>
 
 				</div>
+
+				<img id="story_background">
 			</div>
 
-			<section id='calendar-section' class="section">
+			<section id='calendar-section' class=" section">
 				<div data-smooth class="calendar-div">
 					<div>
 						<h1 style="margin: 3rem;">
@@ -217,7 +220,8 @@
 			<section id='picture_section'>
 				<div>
 					<h1 style="color: white; margin: 2rem;"><strong>과거, 현재</strong></h1>
-					<h1 style="color: white; margin: 2rem;"><strong>그리고 앞으로 <span style="color:hotpink;">함께</span> 만들어 갈
+					<h1 style="color: white; margin: 2rem;"><strong>그리고 앞으로 <span style="color:hotpink;">함께</span>
+							만들어 갈
 							풍경들</strong></h1>
 
 					<hr class="solid">
@@ -233,24 +237,12 @@
 						<p style="color: whitesmoke;">※ 사진을 클릭하시면 더 크게 볼 수 있어요.</p>
 
 						<!-- The Modal -->
-						<div id="myModal" class="modal">
+						<div id="picture_modal" class="modal">
 
 							<!-- Modal content -->
 							<div class="modal-content">
-								<span class="close">&times;</span>
-
 								<div id="carouselExampleControls" class="carousel slide" data-interval="false">
-									<div class="carousel-inner">
-										<div class="carousel-item active">
-											<img src="./images/intro_image.png" class="d-block w-50" alt="...">
-										</div>
-										<div class="carousel-item">
-											<img src="./images/intro_image.png" class="d-block w-50" alt="...">
-										</div>
-										<div class="carousel-item">
-											<img src="./images/intro_image.png" class="d-block w-50" alt="...">
-										</div>
-									</div>
+									<div class="carousel-inner"></div>
 									<button class="carousel-control-prev" type="button"
 										data-bs-target="#carouselExampleControls" data-bs-slide="prev">
 										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -340,7 +332,8 @@
 				</marquee>
 
 				<p class="small_text">
-					성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요. <br> Copyright 2022 짬바와 클린이(성수와 하진이). All right
+					성수가 기획, 디자인,QA 그리고 마크업 개발을 (욕 먹어가면서) 하고, 하진이가 개발했어요. <br> Copyright 2022 짬바와 클린이(성수와 하진이). All
+					right
 					reserved
 				</p>
 			</div>
