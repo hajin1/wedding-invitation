@@ -10,9 +10,9 @@ $font-color : #5D5D5D;
 html, body {
     margin: 0;
     background-color: white;
-    font-family: Verdana, sans-serif;
     scroll-behavior: smooth;
     text-align: center;
+    font-family: "SF Pro Display","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 img {
@@ -185,6 +185,7 @@ img {
     }
 
     #calendar-section {
+      
       background-color: $background-color;
       padding-right: 10%;
       padding-left: 10%
@@ -374,6 +375,14 @@ marquee {
   border-radius: 20px;
 }
 
+canvas {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
 //modal
 /* The Modal (background) */
 .modal {
@@ -456,6 +465,11 @@ marquee {
 #insta_section .svg {
   width: 100px;
   fill: whitesmoke;
+}
+
+#canvas_section {
+  background-color: black;
+  height: 500vh;
 }
 
 #carousel .carousel-item {
@@ -933,3 +947,4 @@ section{
 .normal {
     color: #777;
 }
+
