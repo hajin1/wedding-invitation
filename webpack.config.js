@@ -46,7 +46,7 @@ module.exports = (env, argv) => {
                     }]
                 },
                 {
-                    test: /\.(png|jpeg)$/,
+                    test: /\.(png|jpg|jpeg)$/,
                     use: [
                         {
                             loader: "file-loader",
@@ -62,7 +62,7 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: `[name].css` }),
             new HtmlWebpackPlugin({
-                template: 'src/index_old.html',
+                template: 'src/index.html',
                 filename: '../public/index.html',
             }),
         ]

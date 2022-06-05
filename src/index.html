@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script>
+	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -15,7 +17,53 @@
 </head>
 
 <body>
-	<script>
+	<section class="section-main section">
+		<img id="mainImg" />
+		<div class="caption-box">
+			<div class="caption" id="root">
+				<p>이성수 & 김하진<br>결혼합니다.</p>
+				<!-- <h1 id="intro_text">성수하진</h1> -->
+			</div>
+		</div>
+	</section>
+	<section class="section-story section">
+		<p data-scroll>저희의 이야기를 들려드릴게요.</p>
+		<div data-scroll class="story-box">
+			<img class="story-img" id="story-img1" />
+			<div class="transparent-box">
+				<div class="story-caption story-img1-caption">
+					<p>성수와 하진이는 클라이밍센터에서 만났습니다.</p>
+				</div>
+			</div>
+		</div>
+		<div data-scroll class="story-box">
+			<img class="story-img" id="story-img2" />
+			<div class="transparent-box">
+				<div class="story-caption story-img2-caption">
+					<p>클라이밍뿐만 아니라 등산도 좋아해서 함께 산에 다니며 데이트를 했습니다.</p>
+				</div>
+			</div>
+		</div>
+		<div data-scroll class="story-box">
+			<img class="story-img" id="story-img3" />
+			<div class="transparent-box">
+				<div class="story-caption story-img3-caption">
+					<p>설악산, 지리산, 한라산을 2년 동안 함께 다니며 고통과 기쁨을 함께 나눴습니다.</p>
+				</div>
+			</div>
+		</div>
+		<div data-scroll class="story-box">
+			<img class="story-img" id="story-img4" />
+			<div class="transparent-box">
+				<div class="story-caption story-img4-caption">
+					<p>그리고 평생 같은 곳을 보며 함께 가기로 약속했습니다.</p>
+					<p>저희 결혼식에 참석하시어 축하해주시면 더없이 큰 행복하겠습니다.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <script>
 		document.addEventListener('DOMContentLoaded', () => {
 			new TypeIt('#intro_text')
 				.pause(500)
@@ -28,12 +76,12 @@
 				.type('결혼식에 초대합니다.')
 				.go()
 		})
+	</script> -->
+	<script>
+		ScrollOut({
+			threshold: 0.5
+		});
 	</script>
-
-	<div id="root">
-		<h1 id="intro_text">성수하진</h1>
-
-	</div>
 
 </body>
 

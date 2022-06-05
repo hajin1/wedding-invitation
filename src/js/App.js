@@ -1,92 +1,34 @@
 import '../scss/style.scss';
-import storyBackgroundImg from '../../images/story_background.jpeg'
-import Marquee from './Marquee';
-import 'bootstrap';
-
+import mainImgSrc from '../../images/main_image.jpg';
+import storyImg1Src from '../../images/story1.jpeg';
+import storyImg2Src from '../../images/story2.jpeg';
+import storyImg3Src from '../../images/story3.jpeg';
+import storyImg4Src from '../../images/story4.jpeg';
 
 export default class App {
     constructor() {
-
-        this.bindSmoothEffect();
-        this.marquee = new Marquee();
-
-        this.initImg();
-
         this.init();
     }
 
-    bindSmoothEffect() {
-        const elements = document.querySelectorAll('[data-smooth]');
-
-        let options = {
-            rootMargin: '0px',
-            threshold: 0.1
-        }
-
-        elements.forEach((element) => {
-            let observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                    } else {
-                        entry.target.classList.remove('show');
-                    }
-                })
-            }, options);
-            observer.observe(element);
-        });
-    }
-
     init() {
-        const section = document.getElementById("canvas_section"); //document.documentElement
+        const mainImg = document.getElementById('mainImg');
+        mainImg.src = mainImgSrc;
 
-        const canvas = document.getElementById("hero-lightpass");
-        const context = canvas.getContext("2d");
+        const storyImg1 = document.getElementById('story-img1');
+        storyImg1.src = storyImg1Src;
+        const storyImg2 = document.getElementById('story-img2');
+        storyImg2.src = storyImg2Src;
+        const storyImg3 = document.getElementById('story-img3');
+        storyImg3.src = storyImg3Src;
+        const storyImg4 = document.getElementById('story-img4');
+        storyImg4.src = storyImg4Src;
 
-        const frameCount = 148;
-        const currentFrame = index => (
-            `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-        )
-
-        const preloadImages = () => {
-            for (let i = 1; i < frameCount; i++) {
-                const img = new Image();
-                img.src = currentFrame(i);
-            }
-        };
-
-        const img = new Image()
-        img.src = currentFrame(1);
-        canvas.width = 1158;
-        canvas.height = 770;
-        img.onload = function () {
-            context.drawImage(img, 0, 0);
-        }
-
-        const updateImage = index => {
-            img.src = currentFrame(index);
-            context.drawImage(img, 0, 0);
-        }
-
-        window.addEventListener('scroll', () => {
-            const scrollFraction = section.scrollTop / (section.scrollHeight - window.innerHeight);
-            console.log(scrollFraction)
-
-            const frameIndex = Math.min(
-                frameCount - 1,
-                Math.ceil(scrollFraction * frameCount)
-            );
-
-            requestAnimationFrame(() => updateImage(frameIndex + 1))
-        });
-
-        preloadImages()
+        // const sections = document.getElementsByClassName('section');
+        // console.log(window.innerHeight);
+        // sections[0].style.height = `${window.innerHeight}px`;
+        // sections[1].style.height = `${window.innerHeight}px`;
 
     }
 
-    initImg() {
-        const img = document.getElementById('story_background')
-        img.src = storyBackgroundImg;
-    }
 }
 
