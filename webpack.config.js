@@ -62,7 +62,7 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: `[name].css` }),
             new HtmlWebpackPlugin({
-                template: 'src/index.html',
+                template: 'src/index_old.html',
                 filename: '../public/index.html',
             }),
         ]

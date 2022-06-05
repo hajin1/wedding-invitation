@@ -1,9 +1,7 @@
 import '../scss/style.scss';
-import introImg from '../../images/intro_image.png';
 import storyBackgroundImg from '../../images/story_background.jpeg'
 import Marquee from './Marquee';
 import 'bootstrap';
-import { doc } from 'prettier';
 
 
 export default class App {
@@ -41,7 +39,6 @@ export default class App {
 
     init() {
         const section = document.getElementById("canvas_section"); //document.documentElement
-        console.log(section)
 
         const canvas = document.getElementById("hero-lightpass");
         const context = canvas.getContext("2d");
