@@ -17,6 +17,7 @@ $grid-background-color: #f5f5f7;
 }
 
 html, body {
+  overflow-x: hidden;
   margin: 0;
   background-color: white;
   scroll-behavior: smooth;
@@ -25,9 +26,14 @@ html, body {
   // font-family: "Black Han Sans", "Noto Sans Korean";
 }
 
-.section {
+section {
   width: 100%;
   overflow-x: hidden;
+  margin-bottom: 80px;
+}
+
+.main-img-box {
+  width: 100%;
 }
 
 .section-main {
@@ -67,6 +73,11 @@ html, body {
   letter-spacing: -0.3px;
 }
 
+.story-description {
+  font-size: 30px;
+  line-height: 36px;
+}
+
 .story-box {
   position: relative;
   width: 350px;
@@ -84,6 +95,9 @@ html, body {
   img {
     height: 100%;
     border-radius: inherit;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .story-caption {
@@ -112,6 +126,109 @@ html, body {
   left: 0;
   // transition: background-color 0.3s ease;
 }
+
+.invite-box {
+  height: 375px;
+  position: relative;
+}
+
+.invite-video {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  video {
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;;
+  }
+}
+
+
+//Calendar
+/* Month header */
+.month {
+  padding: 20px;
+  width: 100%;
+  background:$background-color;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: #1abc9c;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:lightgray;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 12%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: $background-color;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size:12px;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: $background-color !important
+}
+
+.dimmed {
+  color: lightgray;
+}
+
+.normal {
+    color: #777;
+}
+
 
 [data-scroll] {
   transition: opacity 1s;

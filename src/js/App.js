@@ -11,7 +11,7 @@ export default class App {
     }
 
     init() {
-        const mainImg = document.getElementById('mainImg');
+        const mainImg = document.getElementById('main-img');
         mainImg.src = mainImgSrc;
 
         const storyImg1 = document.getElementById('story-img1');
