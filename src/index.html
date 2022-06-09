@@ -27,7 +27,7 @@
 		</div>
 	</section>
 	<section class="section-story">
-		<div class="story-description">
+		<div class="section-title">
 			<p data-scroll>저희의 이야기를<br>들려드릴게요.</p>
 		</div>
 		<div data-scroll class="story-box">
@@ -77,74 +77,101 @@
 		</div>
 	</section>
 	<section>
-		<div data-smooth class="calendar-div">
-			<div>
-				<h1 style="margin: 3rem;">
-					날짜</h1>
-				<h3>10월 2일</h3>
-				<p>일요일, 오후 12시 30분</p>
-
-				<div class="month">
-					<ul>
-						<li>October<br></li>
-					</ul>
-				</div>
-
-				<ul class="weekdays">
-					<li>Su</li>
-					<li>Mo</li>
-					<li>Tu</li>
-					<li>We</li>
-					<li>Th</li>
-					<li>Fr</li>
-					<li>Sa</li>
-				</ul>
-
-				<ul class="days">
-					<li class="dimmed">18</li>
-					<li class="dimmed">19</li>
-					<li class="dimmed">20</li>
-					<li class="dimmed">21</li>
-					<li class="dimmed">22</li>
-					<li class="dimmed">23</li>
-					<li class="dimmed">24</li>
-					<li class="dimmed">25</li>
-					<li class="dimmed">26</li>
-					<li class="dimmed">27</li>
-					<li class="dimmed">28</li>
-					<li class="dimmed">29</li>
-					<li class="dimmed">30</li>
-					<li class="normal">1</li>
-					<li><span class="active">2</span></li>
-					<li class="normal">3</li>
-					<li class="normal">4</li>
-					<li class="normal">5</li>
-					<li class="normal">6</li>
-					<li class="normal">7</li>
-					<li class="normal">8</li>
-					<li class="normal">9</li>
-					<li class="normal">10</li>
-					<li class="normal">11</li>
-					<li class="normal">12</li>
-					<li class="normal">13</li>
-					<li class="normal">14</li>
-					<li class="normal">15</li>
-					<li class="normal">16</li>
-					<li class="normal">17</li>
-					<li class="normal">18</li>
-					<li class="normal">19</li>
-					<li class="normal">20</li>
-					<li class="normal">21</li>
-					<li class="normal">22</li>
-				</ul>
-
-				<a
-					href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=성수와 하진이의 결혼식&dates=20221002T123000/20221002T143000&details=❤︎&location=엘블레스, 대한민국 서울특별시 서초구 강남대로">구글캘린더에
-					일정 추가하기</a>
-
-				<hr style="height: 160px; background-color: transparent;">
+		<div class="calendar-div">
+			<div class="section-title">
+				<p>10월 2일</p>
 			</div>
+			<p>일요일 오후 12시 30분</p>
+
+			<div data-scroll class="c-calendar" style="opacity: 1; transform: translate(0px, 0px);">
+				<table cellspacing="0" class="c-calendar-table fade-in"
+					style="opacity: 1; transform: translate(0px, 0px);">
+					<thead>
+						<tr>
+							<th>S</th>
+							<th>M</th>
+							<th>T</th>
+							<th>W</th>
+							<th>T</th>
+							<th>F</th>
+							<th>S</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-scroll style="opacity: 1; transform: translate(0px, 0px);">
+							<td class="dimmed"> <span>18</span></td>
+							<td class="dimmed"> <span>19</span></td>
+							<td class="dimmed"> <span>20</span></td>
+							<td class="dimmed"> <span>21</span></td>
+							<td class="dimmed"> <span>22</span></td>
+							<td class="dimmed"> <span>23</span></td>
+							<td class="dimmed"> <span>24</span></td>
+						</tr>
+						<tr data-scroll style="opacity: 1; transform: translate(0px, 0px);">
+							<td class="dimmed"> <span>25</span></td>
+							<td class="dimmed"> <span>26</span></td>
+							<td class="dimmed"> <span>27</span></td>
+							<td class="dimmed"> <span>28</span></td>
+							<td class="dimmed"> <span>29</span></td>
+							<td class="dimmed"> <span>30</span></td>
+							<td> <span>1</span></td>
+						</tr>
+						<tr data-scroll style="opacity: 1; transform: translate(0px, 0px);">
+							<td>
+								<div class="c-calendar-eday">
+									<div>2</div>
+								</div> <span>2</span>
+							</td>
+							<td> <span>3</span></td>
+							<td> <span>4</span></td>
+							<td> <span>5</span></td>
+							<td> <span>6</span></td>
+							<td> <span>7</span></td>
+							<td> <span>8</span></td>
+						</tr>
+						<tr data-scroll style="opacity: 1; transform: translate(0px, 0px);">
+							<td> <span>9</span></td>
+							<td> <span>10</span></td>
+							<td> <span>11</span></td>
+							<td> <span>12</span></td>
+							<td> <span>13</span></td>
+							<td> <span>14</span></td>
+							<td> <span>15</span></td>
+						</tr>
+						<tr data-scroll style="opacity: 1; transform: translate(0px, 0px);">
+							<td> <span>16</span></td>
+							<td> <span>17</span></td>
+							<td> <span>18</span></td>
+							<td> <span>19</span></td>
+							<td> <span>20</span></td>
+							<td> <span>21</span></td>
+							<td> <span>22</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p>달력에 추가하기</p>
+			<button class="calendar-button" id="google-calendar-button"></button>
 		</div>
+	</section>
+	<section>
+		<div class="section-title">
+			<p>오시는 길</p>
+		</div>
+		<div id="daumRoughmapContainer1646099399130" class="root_daum_roughmap root_daum_roughmap_landing"
+			data-sa-delay="600" style="margin: 3rem;">
+		</div>
+		<script charset="UTF-8" class="daum_roughmap_loader_script"
+			src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+		<script charset="UTF-8">
+			new daum.roughmap.Lander({
+				"timestamp": "1646099399130",
+				"key": "29bce",
+				"mapWidth": "500",
+				"mapHeight": "270"
+			}).render();
+		</script>
 	</section>
 
 	<!-- <script>
