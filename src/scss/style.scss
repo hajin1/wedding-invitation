@@ -18,7 +18,7 @@ $grid-background-color: #f5f5f7;
 
 html, body {
   overflow-x: hidden;
-  margin: 0;
+  margin: 0 auto;
   background-color: white;
   scroll-behavior: smooth;
   text-align: center;
@@ -27,13 +27,9 @@ html, body {
 }
 
 section {
-  width: 100%;
+  // width: 100%;
   overflow-x: hidden;
   margin-bottom: 80px;
-}
-
-.main-img-box {
-  width: 100%;
 }
 
 .section-main {
@@ -199,6 +195,17 @@ section {
   border-radius: 10px;
 }
 
+.map-box {
+  width: calc(100% - 4rem);
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .map {
+    width: 100%;
+  }
+}
 
 [data-scroll] {
   transition: opacity 1s;

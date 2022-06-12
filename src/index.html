@@ -158,21 +158,32 @@
 		<div class="section-title">
 			<p>오시는 길</p>
 		</div>
-		<div id="daumRoughmapContainer1646099399130" class="root_daum_roughmap root_daum_roughmap_landing"
-			data-sa-delay="600" style="margin: 3rem;">
+		<div class="map-box">
+			<div id="daumRoughmapContainer1646099399130" class="map root_daum_roughmap root_daum_roughmap_landing"
+				data-sa-delay="600">
+			</div>
 		</div>
-		<script charset="UTF-8" class="daum_roughmap_loader_script"
-			src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+		<p>엘블레스<br>서울특별시 서초구 강남대로 213 LL층</p>
+		<p>
+			지하철 :3호선 양재역/신분당선 양재역-9번 출구 바로 연결
+			자가용 :
+			엘블레스 옆 양재역 주차장 이용 (서초구 강남대로221)
+			*양재역 주차장에 주차하신 후 옆 건물 스포타임으로 이동하시면 됩니다.
+			(스포타임 건물 지하 1층에 엘블레스가 위치하고 있습니다.)
+			버스 :
+			양재역, 서초문화예술회관에서 하차
+			지선 : 3412,4432,4435
+			간선 : 140,400,405,421,440,441,470,541,542
+			광역 : 9100,9200,9201,9300,9404,9408,9500,9501,9802,M5422,M4403
+			일반 : 11-3,917
+			직행 : 1005,1151,1550,1550-1,1551,1551B,1560,1570,3000,3002,3003,3007,3030,3100
+			3101,3900,5001,5001-1,5002A,5003A,5003B,5006,5100,5300,5300-1,6501,9004,9700
+			위치 :
+			서울특별시 서초구 강남대로 213, 스포타임 지하1층 엘블레스
 
-		<script charset="UTF-8">
-			new daum.roughmap.Lander({
-				"timestamp": "1646099399130",
-				"key": "29bce",
-				"mapWidth": "500",
-				"mapHeight": "270"
-			}).render();
-		</script>
+		</p>
 	</section>
+
 
 	<!-- <script>
 		document.addEventListener('DOMContentLoaded', () => {
@@ -188,6 +199,18 @@
 				.go()
 		})
 	</script> -->
+	<script charset="UTF-8" class="daum_roughmap_loader_script"
+		src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp": "1646099399130",
+			"key": "29bce",
+			// "mapWidth": "100%",
+			// "mapHeight": "270"
+		}).render();
+	</script>
+
 	<script>
 		ScrollOut({
 			threshold: 0.5
