@@ -32,6 +32,44 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="section-introduce">
+		<div class="section-title">
+			<p data-scroll>저희의 이야기를<br>들려드릴게요.</p>
+		</div>
+	</section>
+
+	<section class="content-section" data-scroll>
+		<figure class="figure"><img
+				src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655880691/wedding/story4.jpg" /></figure>
+
+		<div class="content">
+			<header class="header">
+				<h2 class="heading">첫 만남</h2>
+				<div class="subheading">성수와 하진이는 클라이밍센터에서<br />처음 만났습니다.</div>
+			</header>
+
+		</div>
+	</section>
+	<section class="content-section" data-scroll>
+		<figure class="figure"><img src="https://source.unsplash.com/bl_NUhqLC8o/800x800" /></figure>
+
+		<div class="content">
+			<header class="header">
+				<div class="subheading">All-Old Techniques</div>
+				<h2 class="heading">Not Evolved,<br />not transformed either.</h2>
+			</header>
+			<p class="paragraph">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum nisi illum rem recusandae. Tempore
+				consequuntur nihil cumque quis nam deserunt earum atque et ullam facere accusamus cum natus, autem
+				numquam.
+			</p>
+		</div>
+	</section>
+
+
+
+
 	<section class="section-story">
 		<div class="section-title">
 			<p data-scroll>저희의 이야기를<br>들려드릴게요.</p>
@@ -246,7 +284,11 @@
 
 	<script>
 		ScrollOut({
-			threshold: 0.5
+			// threshold: 0.5,
+			cssProps: {
+				visibleY: true,
+				visibleX: true
+			}
 		});
 	</script>
 

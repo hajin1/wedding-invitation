@@ -26,11 +26,6 @@ export default class App {
 
         this.createGoogleCalendarButton();
         // this.bindInviteVideoLink();
-        // const sections = document.getElementsByClassName('section');
-        // console.log(window.innerHeight);
-        // sections[0].style.height = `${window.innerHeight}px`;
-        // sections[1].style.height = `${window.innerHeight}px`;
-
     }
 
     createGoogleCalendarButton() {
@@ -41,8 +36,6 @@ export default class App {
         });
         const iconElm = document.createElement('img');
         iconElm.src = googleCalendarIcon;
-        console.log(iconElm);
-        console.log(buttonElm);
         buttonElm.append(iconElm);
     }
 
