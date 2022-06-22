@@ -1,10 +1,10 @@
 import '../scss/style.scss';
-import mainImgSrc from '../../images/main_image.jpg';
-import storyImg1Src from '../../images/story1.jpeg';
-import storyImg2Src from '../../images/story2.jpeg';
-import storyImg3Src from '../../images/story3.jpeg';
-import storyImg4Src from '../../images/story4.jpeg';
-import googleCalendarIcon from '../../images/google-calendar-icon.png';
+import mainImgSrc from '../../resources/main_image.jpg';
+import storyImg1Src from '../../resources/story1.jpeg';
+import storyImg2Src from '../../resources/story2.jpeg';
+import storyImg3Src from '../../resources/story3.jpeg';
+import storyImg4Src from '../../resources/story4.jpeg';
+import googleCalendarIcon from '../../resources/google-calendar-icon.png';
 
 export default class App {
     constructor() {
@@ -12,8 +12,8 @@ export default class App {
     }
 
     init() {
-        const mainImg = document.getElementById('main-img');
-        mainImg.src = mainImgSrc;
+        // const mainImg = document.getElementById('main-img');
+        // mainImg.src = mainImgSrc;
 
         const storyImg1 = document.getElementById('story-img1');
         storyImg1.src = storyImg1Src;
@@ -25,6 +25,7 @@ export default class App {
         storyImg4.src = storyImg4Src;
 
         this.createGoogleCalendarButton();
+        // this.bindInviteVideoLink();
         // const sections = document.getElementsByClassName('section');
         // console.log(window.innerHeight);
         // sections[0].style.height = `${window.innerHeight}px`;
@@ -43,6 +44,13 @@ export default class App {
         console.log(iconElm);
         console.log(buttonElm);
         buttonElm.append(iconElm);
+    }
+
+    bindInviteVideoLink() {
+        const elm = document.getElementById('invite-video');
+        elm.addEventListener('click', () => {
+            window.open('https://youtu.be/WUaBlwl4X3M');
+        })
     }
 
 }
