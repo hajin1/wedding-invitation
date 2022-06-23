@@ -15,14 +15,14 @@ export default class App {
         // const mainImg = document.getElementById('main-img');
         // mainImg.src = mainImgSrc;
 
-        const storyImg1 = document.getElementById('story-img1');
-        storyImg1.src = storyImg1Src;
-        const storyImg2 = document.getElementById('story-img2');
-        storyImg2.src = storyImg2Src;
-        const storyImg3 = document.getElementById('story-img3');
-        storyImg3.src = storyImg3Src;
-        const storyImg4 = document.getElementById('story-img4');
-        storyImg4.src = storyImg4Src;
+        // const storyImg1 = document.getElementById('story-img1');
+        // storyImg1.src = storyImg1Src;
+        // const storyImg2 = document.getElementById('story-img2');
+        // storyImg2.src = storyImg2Src;
+        // const storyImg3 = document.getElementById('story-img3');
+        // storyImg3.src = storyImg3Src;
+        // const storyImg4 = document.getElementById('story-img4');
+        // storyImg4.src = storyImg4Src;
 
         this.createGoogleCalendarButton();
         // this.bindInviteVideoLink();

@@ -82,8 +82,11 @@ section {
 .section-title {
   font-size: 30px;
   line-height: 36px;
-  height: 100%;
+}
+
+.introduce-title {
   display: flex;
+  height: 100%;
   align-items: center;
 }
 
@@ -155,12 +158,12 @@ section {
 .invite-box {
   height: 375px;
   position: relative;
-  
+  width: 100%;
 }
 
 .video {
   overflow: hidden;
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -181,6 +184,7 @@ section {
   border: 1px solid $primary-color;
   border-left: 0;
   border-right: 0;
+  margin: 0 30px;
   td {
     position:relative;
   }
@@ -243,6 +247,14 @@ section {
   align-items: center;
 }
 
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+}
+
 [data-scroll] {
   transition: opacity 1s;
 }
@@ -254,7 +266,7 @@ section {
 }
 
 
-// ------
+// ----------------
 
 .intro-section {
   text-align: center;
@@ -276,7 +288,6 @@ section {
     opacity: 1; 
     opacity: calc( 1 + var(--viewport-y) );
   }
- 
 }
 
 .figure {
@@ -291,7 +302,8 @@ section {
     display: block;
     width: 100%;
     // height: 100%;
-    min-height: 50%;
+    // min-height: 50%;
+    height: 100%;
     max-width: 100%;
     object-fit: cover;
     object-position: center center;
@@ -304,7 +316,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  max-width: 35em;
+  // max-width: 35em;
   display: grid;
   grid-template-rows: 1fr 1fr;
   color: white;
@@ -342,13 +354,12 @@ section {
 /* ---------------------------------- */
 
 .figure {
-  --scale: calc(.8 +(.2 * var(--scroll-length) * var(--visible-y)));
+  --scale: calc(.8 +  (.2 * var(--scroll-length) * var(--visible-y)));
   position: sticky;
   top: 0;
   left: 0;
   margin: 0;
-  display: flex;
-  align-items: center; 
+  display: block; 
   overflow: hidden;
   will-change: transform;
   transform: scale(var(--scale));
@@ -361,8 +372,8 @@ section {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: rgba(grey, 1);
-    opacity: calc( var(--visible-y) - 0.3);
+    background-color: rgba(#f4f4f4, 1);
+    opacity: calc( var(--visible-y) - .4);
   }
 
   > img {
@@ -371,7 +382,6 @@ section {
     transform: scale(calc(1 / var(--scale)));
   }
 }
-
 /* ---------------------------------- */
 
 .char {
