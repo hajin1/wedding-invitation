@@ -1,10 +1,8 @@
 import '../scss/style.scss';
-import mainImgSrc from '../../resources/main_image.jpg';
-import storyImg1Src from '../../resources/story1.jpeg';
-import storyImg2Src from '../../resources/story2.jpeg';
-import storyImg3Src from '../../resources/story3.jpeg';
-import storyImg4Src from '../../resources/story4.jpeg';
 import googleCalendarIcon from '../../resources/google-calendar-icon.png';
+import kakaoMapIcon from '../../resources/kakaomap_icon.png';
+import naverMapIcon from '../../resources/navermap_icon.png';
+import copyLinkIcon from '../../resources/copylink_icon.png';
 
 export default class App {
     constructor() {
@@ -12,20 +10,40 @@ export default class App {
     }
 
     init() {
-        // const mainImg = document.getElementById('main-img');
-        // mainImg.src = mainImgSrc;
-
-        // const storyImg1 = document.getElementById('story-img1');
-        // storyImg1.src = storyImg1Src;
-        // const storyImg2 = document.getElementById('story-img2');
-        // storyImg2.src = storyImg2Src;
-        // const storyImg3 = document.getElementById('story-img3');
-        // storyImg3.src = storyImg3Src;
-        // const storyImg4 = document.getElementById('story-img4');
-        // storyImg4.src = storyImg4Src;
-
         this.createGoogleCalendarButton();
+        this.bindMapButton();
         // this.bindInviteVideoLink();
+    }
+
+    bindMapButton() {
+        const naverButton = document.getElementById('naver-map-button');
+        naverButton.addEventListener('click', () => {
+            window.open('https://map.naver.com/v5/directions/-/14141468.151074853,4506638.338950755,엘블레스,37688101,PLACE_POI/-/transit?c=14141002.3740654,4506638.3529793,15,0,0,0,dh');
+        });
+
+        const kakaoButton = document.getElementById('kakao-map-button');
+        kakaoButton.addEventListener('click', () => {
+            window.open('https://map.kakao.com/link/to/엘블레스,37.48281604699608,127.03482927733398');
+        });
+
+        const copyButton = document.getElementById('copy-link-button');
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText('서울 서초구 강남대로 213 스포타임 지하1층 엘블레스');
+            window.alert('주소가 복사되었습니다!');
+        });
+
+        const kakaoIconElm = document.createElement('img');
+        kakaoIconElm.src = kakaoMapIcon;
+        kakaoButton.prepend(kakaoIconElm);
+
+        const naverIconElm = document.createElement('img');
+        naverIconElm.src = naverMapIcon;
+        naverButton.prepend(naverIconElm);
+
+        const copyIconElm = document.createElement('img');
+        copyIconElm.src = copyLinkIcon;
+        copyButton.prepend(copyIconElm);
+
     }
 
     createGoogleCalendarButton() {
@@ -36,7 +54,7 @@ export default class App {
         });
         const iconElm = document.createElement('img');
         iconElm.src = googleCalendarIcon;
-        buttonElm.append(iconElm);
+        buttonElm.prepend(iconElm);
     }
 
     bindInviteVideoLink() {
