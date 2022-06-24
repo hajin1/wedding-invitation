@@ -3,6 +3,7 @@ import googleCalendarIcon from '../../resources/google-calendar-icon.png';
 import kakaoMapIcon from '../../resources/kakaomap_icon.png';
 import naverMapIcon from '../../resources/navermap_icon.png';
 import copyLinkIcon from '../../resources/copylink_icon.png';
+import sendIcon from '../../resources/send.png';
 
 export default class App {
     constructor() {
@@ -12,7 +13,19 @@ export default class App {
     init() {
         this.createGoogleCalendarButton();
         this.bindMapButton();
+        this.bindInstaButton();
         // this.bindInviteVideoLink();
+    }
+
+    bindInstaButton() {
+        const button = document.getElementById('insta-button');
+        button.addEventListener('click', () => {
+            window.open('https://www.instagram.com/jin_hiking_s2/');
+        });
+
+        const sendIconElm = document.createElement('img');
+        sendIconElm.src = sendIcon;
+        button.append(sendIconElm);
     }
 
     bindMapButton() {
@@ -43,7 +56,6 @@ export default class App {
         const copyIconElm = document.createElement('img');
         copyIconElm.src = copyLinkIcon;
         copyButton.prepend(copyIconElm);
-
     }
 
     createGoogleCalendarButton() {
@@ -57,12 +69,12 @@ export default class App {
         buttonElm.prepend(iconElm);
     }
 
-    bindInviteVideoLink() {
-        const elm = document.getElementById('invite-video');
-        elm.addEventListener('click', () => {
-            window.open('https://youtu.be/WUaBlwl4X3M');
-        })
-    }
+    // bindInviteVideoLink() {
+    //     const elm = document.getElementById('invite-video');
+    //     elm.addEventListener('click', () => {
+    //         window.open('https://youtu.be/WUaBlwl4X3M');
+    //     })
+    // }
 
 }
 

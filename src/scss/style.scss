@@ -348,6 +348,21 @@ button {
   }
 }
 
+#insta-button {
+  border-radius: 2rem;
+  width: 7rem;
+  height: 3rem;
+  background-color: #F5C6AA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 [data-scroll] {
   transition: opacity 1s;
 }
@@ -498,15 +513,4 @@ button {
 .heading,
 .intro-heading {
   font-weight: 700;
-}
-
-body, html {
-  // height: 100%;
-  // width: 100%;
-  // margin: 0;
-  // padding: 0;
-//   line-height: 1.05;
-//   font-weight: 400;
-//   letter-spacing: -.015em;
-//   font-family: "SF Pro Display","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
