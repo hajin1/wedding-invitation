@@ -3,6 +3,7 @@ import googleCalendarIcon from '../../resources/google-calendar-icon.png';
 import kakaoMapIcon from '../../resources/kakaomap_icon.png';
 import naverMapIcon from '../../resources/navermap_icon.png';
 import copyLinkIcon from '../../resources/copylink_icon.png';
+import unfoldIcon from '../../resources/unfold.png';
 
 const ACCOUNT_NUM1 = '110334785476';
 const ACCOUNT_NUM2 = '110325340667';
@@ -23,14 +24,29 @@ export default class App {
         const titleElm1 = document.getElementById('account-title1');
         titleElm1.addEventListener('click', () => {
             const accountElm = document.getElementById('account-1');
-            accountElm.classList.contains('hide') ? accountElm.classList.remove('hide') : accountElm.classList.add('hide');
+            if (accountElm.classList.contains('hide')) {
+                accountElm.classList.remove('hide');
+                titleElm1.querySelector('img').classList.add('rotate');
+            } else {
+                accountElm.classList.add('hide');
+                titleElm1.querySelector('img').classList.remove('rotate');
+            }
         });
 
         const titleElm2 = document.getElementById('account-title2');
         titleElm2.addEventListener('click', () => {
             const accountElm = document.getElementById('account-2');
-            accountElm.classList.contains('hide') ? accountElm.classList.remove('hide') : accountElm.classList.add('hide');
+            if (accountElm.classList.contains('hide')) {
+                accountElm.classList.remove('hide');
+                titleElm2.querySelector('img').classList.add('rotate');
+            } else {
+                accountElm.classList.add('hide');
+                titleElm2.querySelector('img').classList.remove('rotate');
+            }
         });
+
+        titleElm1.querySelector('img').src = unfoldIcon;
+        titleElm2.querySelector('img').src = unfoldIcon;
 
         const copyButton1 = document.getElementById('account-copy-button1');
         copyButton1.addEventListener('click', () => {
