@@ -348,19 +348,110 @@ button {
   }
 }
 
+.section-account {
+  padding: 5rem 0;
+
+  .account-content {
+    color: $font-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .account-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        cursor: pointer;
+        width: 15rem;
+        height: 3rem;
+        display: flex;
+        background-color: $primary-color;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .account {
+        display: flex;
+        justify-content: space-between;
+        transition: all .5s ease-out;
+        font-size: 12px;
+        opacity: 1;
+        background-color: $secendary-color;
+        height: 80px;
+        visibility: visible;
+        padding: 0 20px;
+        align-items: center;
+        .bank {
+          flex-grow: 3;
+          text-align: left;
+        }
+        .copy {
+          border: 1px solid black;
+          border-radius: 5px;
+          padding: 4px;
+          cursor: pointer;
+        }
+      }
+      .hide {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        height: 0 !important;
+      }
+      
+    }
+  }
+}
+
+
+.section-insta {
+  .img-wrapper {
+    width: calc(33.333% - 2px);
+    height: 140px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 #insta-button {
   border-radius: 2rem;
   width: 7rem;
   height: 3rem;
   background-color: #F5C6AA;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: $font-color;
 
   img {
-    width: 20px;
-    height: 20px;
+    width: 80px;
+    height: 80px;
   }
+}
+
+.section-insta {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(135deg, #E338F7 0,  #EB4628 100%); 
+  color: $background-color;
+}
+
+.copyright {
+  font-size: 10px;
+  color: $font-color;
+  margin: 10px 20px;
 }
 
 [data-scroll] {
