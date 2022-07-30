@@ -4,15 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script> -->
-	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="css/blueimp-gallery.min.css" />
 	<title>Document</title>
 </head>
 
@@ -33,122 +34,6 @@
 		</div>
 	</section>
 
-	<section class="section-introduce">
-		<div class="section-title introduce-title">
-			<p data-scroll>저희의 이야기를<br>들려드릴게요.</p>
-		</div>
-	</section>
-
-	<section class="content-section" data-scroll>
-		<figure class="figure"><img
-				src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655880691/wedding/story1.jpg" /></figure>
-
-		<div class="content">
-			<header class="header">
-				<h2 class="heading">첫 만남</h2>
-				<div class="subheading">성수와 하진이는 클라이밍센터에서<br />처음 만났습니다.</div>
-			</header>
-		</div>
-	</section>
-	<section class="content-section" data-scroll>
-		<figure class="figure"><img
-				src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655880691/wedding/story2.jpg" /></figure>
-
-		<div class="content">
-			<header class="header">
-				<h2 class="heading">같은 취미</h2>
-				<div class="subheading">클라이밍 뿐만아니라 등산도 좋아해서<br /> 함께 산에 다니며 데이트를 즐겼습니다.</div>
-			</header>
-		</div>
-	</section>
-	<section class="content-section" data-scroll>
-		<figure class="figure"><img
-				src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655880691/wedding/story3.jpg" /></figure>
-
-		<div class="content">
-			<header class="header">
-				<h2 class="heading">등산</h2>
-				<div class="subheading">설악산, 지리산, 한라산을 2년 동안 함께 다니며<br />고통과 기쁨을 함께 나눴습니다.</div>
-			</header>
-		</div>
-	</section>
-	<section class="content-section" data-scroll>
-		<figure class="figure"><img
-				src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655880691/wedding/story4.jpg" /></figure>
-
-		<div class="content">
-			<header class="header">
-				<h2 class="heading">약속</h2>
-				<div class="subheading">그리고 평생 같은 곳을 보며 함께하기로 약속했습니다.<br>저희 결혼식에 참석하시어 축하해주시면 큰 행복이 되겠습니다!</div>
-			</header>
-		</div>
-	</section>
-	<!-- <section class="content-section" data-scroll>
-		<figure class="figure"><img src="https://source.unsplash.com/bl_NUhqLC8o/800x800" /></figure>
-
-		<div class="content">
-			<header class="header">
-				<div class="subheading">All-Old Techniques</div>
-				<h2 class="heading">Not Evolved,<br />not transformed either.</h2>
-			</header>
-			<p class="paragraph">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum nisi illum rem recusandae. Tempore
-				consequuntur nihil cumque quis nam deserunt earum atque et ullam facere accusamus cum natus, autem
-				numquam.
-			</p>
-		</div>
-	</section> -->
-
-	<!-- <section class="section-story">
-		<div class="section-title">
-			<p data-scroll>저희의 이야기를<br>들려드릴게요.</p>
-		</div>
-		<div data-scroll class="story-box">
-			<img class="story-img" id="story-img1" />
-			<div class="transparent-box">
-				<div class="story-caption story-img1-caption">
-					<p>성수와 하진이는 클라이밍센터에서 만났습니다.</p>
-				</div>
-			</div>
-		</div>
-		<div data-scroll class="story-box">
-			<img class="story-img" id="story-img2" />
-			<div class="transparent-box">
-				<div class="story-caption story-img2-caption">
-					<p>클라이밍뿐만 아니라 등산도 좋아해서 함께 산에 다니며 데이트를 했습니다.</p>
-				</div>
-			</div>
-		</div>
-		<div data-scroll class="story-box">
-			<img class="story-img" id="story-img3" />
-			<div class="transparent-box">
-				<div class="story-caption story-img3-caption">
-					<p>설악산, 지리산, 한라산을 2년 동안 함께 다니며 고통과 기쁨을 함께 나눴습니다.</p>
-				</div>
-			</div>
-		</div>
-		<div data-scroll class="story-box">
-			<img class="story-img" id="story-img4" />
-			<div class="transparent-box">
-				<div class="story-caption story-img4-caption">
-					<p>그리고 평생 같은 곳을 보며 함께 가기로 약속했습니다.</p>
-					<p>저희 결혼식에 참석하시어 축하해주시면 더없이 큰 행복하겠습니다.</p>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- <section class="section">
-		<div class="section-title">
-			<p data-scroll>초대영상</p>
-		</div>
-		<div class="invite-box">
-			<div id="invite-video" class="video">
-				<iframe src="https://www.youtube.com/embed/WUaBlwl4X3M" title="YouTube video player" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
-			</div>
-		</div>
-	</section> -->
 	<section class="section">
 		<div class="calendar-div">
 			<div class="section-title">
@@ -273,43 +158,90 @@
 		<div class="section-title">
 			<p data-scroll>사진첩</p>
 		</div>
-		<div class="gallery">
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995388/wedding/gallery8_olq46z.jpg" />
+		<!-- The Gallery as lightbox dialog, should be a document body child element -->
+		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-contain" aria-label="image gallery"
+			aria-modal="true" role="dialog">
+			<div class="slides" aria-live="polite"></div>
+			<h3 class="title"></h3>
+			<a class="prev" aria-controls="blueimp-gallery" aria-label="previous slide"
+				aria-keyshortcuts="ArrowLeft"></a>
+			<a class="next" aria-controls="blueimp-gallery" aria-label="next slide" aria-keyshortcuts="ArrowRight"></a>
+			<a class="close" aria-controls="blueimp-gallery" aria-label="close" aria-keyshortcuts="Escape"></a>
+			<a class="play-pause" aria-controls="blueimp-gallery" aria-label="play slideshow" aria-keyshortcuts="Space"
+				aria-pressed="false" role="button"></a>
+			<ol class="indicator"></ol>
+		</div>
+		<div id="links">
+			<div class="gallery">
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995388/wedding/gallery8_olq46z.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995388/wedding/gallery8_olq46z.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995390/wedding/gallery2.jpg" data-scroll
+					class="img-wrapper">
+					<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995390/wedding/gallery2.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery9.jpg" data-scroll
+					class="img-wrapper">
+					<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery9.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery3_brvtab.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery3_brvtab.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995387/wedding/gallery10_p2eghq.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995387/wedding/gallery10_p2eghq.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery4_cvdh0s.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery4_cvdh0s.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery6.jpg" data-scroll
+					class="img-wrapper">
+					<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery6.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995388/wedding/gallery1.jpg" data-scroll
+					class="img-wrapper">
+					<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995388/wedding/gallery1.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery12_q1ziez.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery12_q1ziez.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery11_ivn1zu.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery11_ivn1zu.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery7_bhrtxl.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery7_bhrtxl.jpg" />
+				</a>
+				<a href="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery5_n0oguy.jpg"
+					data-scroll class="img-wrapper">
+					<img
+						src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery5_n0oguy.jpg" />
+				</a>
+
+
 			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995390/wedding/gallery2.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery9.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery3_brvtab.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995387/wedding/gallery10_p2eghq.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery4_cvdh0s.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995389/wedding/gallery6.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995388/wedding/gallery1.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery12_q1ziez.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery11_ivn1zu.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery7_bhrtxl.jpg" />
-			</div>
-			<div data-scroll class="img-wrapper">
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/v1655995386/wedding/gallery5_n0oguy.jpg" />
-			</div>
+		</div>
+		<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+		<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel" aria-label="image carousel">
+			<div class="slides" aria-live="off"></div>
+			<h3 class="title"></h3>
+			<a class="prev" aria-controls="blueimp-gallery-carousel" aria-label="previous slide"></a>
+			<a class="next" aria-controls="blueimp-gallery-carousel" aria-label="next slide"></a>
+			<a class="play-pause" aria-controls="blueimp-gallery-carousel" aria-label="play slideshow"
+				aria-pressed="true" role="button"></a>
+			<ol class="indicator"></ol>
 		</div>
 	</section>
 
@@ -373,6 +305,8 @@
 	</script> -->
 	<script charset="UTF-8" class="daum_roughmap_loader_script"
 		src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+	<script src="js/blueimp-gallery.min.js"></script>
 
 	<script charset="UTF-8">
 		new daum.roughmap.Lander({
@@ -381,14 +315,27 @@
 			// "mapWidth": "100%",
 			// "mapHeight": "270"
 		}).render();
-	</script>
-	<script>
+
 		ScrollOut({
 			threshold: 0.5,
 			cssProps: {
 				visibleY: true,
 				visibleX: true
 			}
+		});
+
+		document.getElementById('links').onclick = function (event) {
+			event = event || window.event
+			var target = event.target || event.srcElement
+			var link = target.src ? target.parentNode : target
+			var options = { index: link, event: event }
+			var links = this.getElementsByTagName('a')
+			blueimp.Gallery(links, options)
+		}
+
+		blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'), {
+			container: '#blueimp-gallery-carousel',
+			carousel: true
 		});
 	</script>
 
