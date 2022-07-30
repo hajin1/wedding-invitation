@@ -50,10 +50,10 @@ module.exports = (env, argv) => {
                     use: [
                         {
                             loader: "file-loader",
-                            options: {
-                                outputPath: './images',
-                                name: '[name].[ext]'
-                            }
+                            // options: {
+                            //     outputPath: './img',
+                            //     name: '[name].[ext]'
+                            // }
                         }]
                 }
             ]

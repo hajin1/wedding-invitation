@@ -1,9 +1,9 @@
 import '../scss/style.scss';
-import googleCalendarIcon from '../../resources/google-calendar-icon.png';
-import kakaoMapIcon from '../../resources/kakaomap_icon.png';
-import naverMapIcon from '../../resources/navermap_icon.png';
-import copyLinkIcon from '../../resources/copylink_icon.png';
-import unfoldIcon from '../../resources/unfold.png';
+import googleCalendarIcon from '../../resources/img/google-calendar-icon.png';
+import kakaoMapIcon from '../../resources/img/kakaomap_icon.png';
+import naverMapIcon from '../../resources/img/navermap_icon.png';
+import copyLinkIcon from '../../resources/img/copylink_icon.png';
+import unfoldIcon from '../../resources/img/unfold.png';
 
 const ACCOUNT_NUM1 = '110334785476';
 const ACCOUNT_NUM2 = '110325340667';
