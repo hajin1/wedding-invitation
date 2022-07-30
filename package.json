@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "homepage": "https://hajin1.github.io/wedding-invitation/",
   "scripts": {
     "start": "webpack serve --mode development && cp -r resources public/",
-    "build": "webpack --mode=production && cp -r resources public/"
+    "build": "webpack --mode=production && cp -r resources public/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.2",
     "bootstrap": "^5.1.3",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0",
     "typeit": "^8.5.3",
