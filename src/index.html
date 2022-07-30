@@ -322,25 +322,6 @@
           </a>
         </div>
       </div>
-      <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-      <div
-        id="blueimp-gallery-carousel"
-        class="blueimp-gallery blueimp-gallery-carousel"
-        aria-label="image carousel"
-      >
-        <div class="slides" aria-live="off"></div>
-        <h3 class="title"></h3>
-        <a class="prev" aria-controls="blueimp-gallery-carousel" aria-label="previous slide"></a>
-        <a class="next" aria-controls="blueimp-gallery-carousel" aria-label="next slide"></a>
-        <a
-          class="play-pause"
-          aria-controls="blueimp-gallery-carousel"
-          aria-label="play slideshow"
-          aria-pressed="true"
-          role="button"
-        ></a>
-        <ol class="indicator"></ol>
-      </div>
     </section>
 
     <section class="section-account">
@@ -376,7 +357,7 @@
       <div class="section-title">
         <p data-scroll>성수와 하진이<br />인스타그램에<br />놀러오세요!</p>
       </div>
-      <div>
+      <div class="button-wrapper">
         <p>@jin_hiking_s2</p>
         <button id="insta-button">보러가기</button>
       </div>
@@ -436,11 +417,6 @@
         var links = this.getElementsByTagName('a');
         blueimp.Gallery(links, options);
       };
-
-      blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'), {
-        container: '#blueimp-gallery-carousel',
-        carousel: true,
-      });
     </script>
   </body>
 </html>
