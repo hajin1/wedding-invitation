@@ -628,7 +628,8 @@ button {
   opacity: 0;
   // opacity: 1; // 삭제 
   animation: fade-out 4s;
-  z-index: 300;
+  z-index: 50000;
+  overflow-y: hidden;
 
   #icon {
     --size: 50px;
@@ -667,7 +668,6 @@ button {
   }
   100% {
     opacity: 0;
-    // opacity: 1; // 삭제해야됨
   }
 }
 
@@ -675,6 +675,14 @@ button {
   width: 100%;
 }
 
-#links {
-  z-index: 50000;
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#content-layer {
+  z-index: 5000;
 }

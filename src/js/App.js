@@ -18,6 +18,17 @@ export default class App {
         this.bindMapButton();
         this.bindInstaButton();
         this.bindAccountToggle();
+
+        const coverElm = document.getElementById('cover');
+        coverElm.addEventListener('animationend', () => {
+            coverElm.classList.add('hidden');
+
+            const contentLayerElm = document.getElementById('content-layer');
+            if (contentLayerElm.classList.contains('hidden')) {
+                contentLayerElm.classList.remove('hidden');
+                contentLayerElm.classList.add('show');
+            }
+        });
     }
 
     bindAccountToggle() {
