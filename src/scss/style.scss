@@ -34,7 +34,7 @@ section {
 }
 
 .section {
-  height: 100vh;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,9 +274,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .map {
-    width: 100%;
-  }
 }
 
 .address-wrapper {

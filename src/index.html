@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<!-- <script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
@@ -126,8 +126,7 @@
 			</div>
 
 			<div class="map-box">
-				<div id="daumRoughmapContainer1646099399130" class="map root_daum_roughmap root_daum_roughmap_landing"
-					data-sa-delay="600"></div>
+				<div id="map" style="width: 100%; height: 320px"></div>
 			</div>
 			<div class="buttons-wrapper">
 				<button id="naver-map-button" class="icon-button">네이버지도</button>
@@ -296,19 +295,24 @@
 				.go()
 		})
 	</script> -->
-	<script charset="UTF-8" class="daum_roughmap_loader_script"
-		src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-	<script src="resources/js/blueimp-gallery.min.js"></script>
 
-	<script charset="UTF-8">
-		new daum.roughmap.Lander({
-			timestamp: '1646099399130',
-			key: '29bce',
-			// "mapWidth": "100%",
-			// "mapHeight": "270"
-		}).render();
+	<script type="text/javascript"
+		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=o2nmku8hr0"></script>
+	<script>
+		const position = new naver.maps.LatLng(37.483, 127.035);
+		const mapOptions = {
+			center: position,
+			zoom: 15,
+		};
 
+		const map = new naver.maps.Map('map', mapOptions);
+		const marker = new naver.maps.Marker({
+			map: map,
+			position: position,
+			title: '엘블레스'
+		});
+	</script>
+	<script>
 		ScrollOut({
 			threshold: 0.5,
 			cssProps: {
@@ -324,10 +328,10 @@
 
 		document.getElementById('links').onclick = function (event) {
 			event = event || window.event;
-			var target = event.target || event.srcElement;
-			var link = target.src ? target.parentNode : target;
-			var options = { index: link, event: event };
-			var links = this.getElementsByTagName('a');
+			const target = event.target || event.srcElement;
+			const link = target.src ? target.parentNode : target;
+			const options = { index: link, event: event };
+			const links = this.getElementsByTagName('a');
 			blueimp.Gallery(links, options);
 		};
 	</script>
