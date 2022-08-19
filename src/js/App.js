@@ -105,13 +105,6 @@ export default class App {
 			window.open('https://map.kakao.com/link/to/엘블레스,37.48281604699608,127.03482927733398');
 		});
 
-		const copyButton = document.getElementById('copy-link-button');
-		copyButton.addEventListener('click', () => {
-			navigator.clipboard.writeText('서울 서초구 강남대로 213 스포타임 지하1층 엘블레스').then(() => {
-				window.alert('주소가 복사되었습니다!');
-			});
-		});
-
 		const kakaoIconElm = document.createElement('img');
 		kakaoIconElm.src = kakaoMapIcon;
 		kakaoButton.prepend(kakaoIconElm);
@@ -120,9 +113,15 @@ export default class App {
 		naverIconElm.src = naverMapIcon;
 		naverButton.prepend(naverIconElm);
 
+		const copyButton = document.getElementById('copy-link-button');
 		const copyIconElm = document.createElement('img');
 		copyIconElm.src = copyLinkIcon;
 		copyButton.prepend(copyIconElm);
+
+		const clipboard = new ClipboardJS('#copy-link-button');
+		clipboard.on('success', () => {
+			window.alert(`주소가 복사되었습니다!`);
+		});
 	}
 
 	createGoogleCalendarButton() {
