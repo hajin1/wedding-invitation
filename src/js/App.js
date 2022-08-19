@@ -1,9 +1,4 @@
 import '../scss/style.scss';
-import googleCalendarIcon from '../../resources/img/google-calendar-icon.png';
-import kakaoMapIcon from '../../resources/img/kakaomap_icon.png';
-import naverMapIcon from '../../resources/img/navermap_icon.png';
-import copyLinkIcon from '../../resources/img/copylink_icon.png';
-import unfoldIcon from '../../resources/img/unfold.png';
 import { ACCOUNT_INFO } from './const';
 
 export default class App {
@@ -71,8 +66,6 @@ export default class App {
 		const elms = document.getElementsByClassName('account-title');
 
 		Array.from(elms).map(elm => {
-			elm.querySelector('img').src = unfoldIcon;
-
 			const listElm = elm.parentElement.querySelector('.account-list');
 			listElm.setAttribute('style', `height: ${listElm.childElementCount * 50}px`);
 			elm.addEventListener('click', () => {
@@ -105,19 +98,6 @@ export default class App {
 			window.open('https://map.kakao.com/link/to/엘블레스,37.48281604699608,127.03482927733398');
 		});
 
-		const kakaoIconElm = document.createElement('img');
-		kakaoIconElm.src = kakaoMapIcon;
-		kakaoButton.prepend(kakaoIconElm);
-
-		const naverIconElm = document.createElement('img');
-		naverIconElm.src = naverMapIcon;
-		naverButton.prepend(naverIconElm);
-
-		const copyButton = document.getElementById('copy-link-button');
-		const copyIconElm = document.createElement('img');
-		copyIconElm.src = copyLinkIcon;
-		copyButton.prepend(copyIconElm);
-
 		const clipboard = new ClipboardJS('#copy-link-button');
 		clipboard.on('success', () => {
 			window.alert(`주소가 복사되었습니다!`);
@@ -131,8 +111,5 @@ export default class App {
 				'https://calendar.google.com/calendar/render?action=TEMPLATE&text=성수와 하진이의 결혼식&dates=20221002T123000/20221002T143000&details=❤︎&location=엘블레스, 대한민국 서울특별시 서초구 강남대로';
 			window.open(url);
 		});
-		const iconElm = document.createElement('img');
-		iconElm.src = googleCalendarIcon;
-		buttonElm.prepend(iconElm);
 	}
 }
