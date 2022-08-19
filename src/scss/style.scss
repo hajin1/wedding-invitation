@@ -6,6 +6,9 @@ $background-color: #f6f6f6;
 $font-color: #5d5d5d;
 $text-color: #ffffff;
 $grid-background-color: #f5f5f7;
+$title-font-size: 30px;
+$title-line-height: 36px;
+
 // $grid-background-color: pink;
 
 @font-face {
@@ -17,23 +20,19 @@ $grid-background-color: #f5f5f7;
 
 html,
 body {
-	// overflow-x: hidden;
 	margin: 0 auto;
 	background-color: white;
 	scroll-behavior: smooth;
 	text-align: center;
 	font-family: 'SuseongDotum', 'Noto Sans Korean', 'Noto Sans';
-	// font-family: "Black Han Sans", "Noto Sans Korean";
 }
 
 section {
 	width: 100%;
-	// overflow-x: hidden;
-	// margin-bottom: 80px;
 }
 
 .section {
-	height: 1000px;
+	margin: 15rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -87,8 +86,8 @@ section {
 }
 
 .section-title {
-	font-size: 30px;
-	line-height: 36px;
+	font-size: $title-font-size;
+	line-height: $title-line-height;
 }
 
 .introduce-title {
@@ -227,7 +226,7 @@ section {
 }
 
 .dimmed {
-	color: lightgray;
+	opacity: 0.3;
 }
 
 button {
@@ -689,4 +688,24 @@ button {
 
 #content-layer {
 	z-index: 5000;
+}
+
+// -------- notice --------
+.section-notice {
+	.notice-wrapper {
+		border: 1px solid $primary-color;
+		border-radius: 14px;
+		padding: 1.5rem;
+		margin: 1rem;
+		background-color: #fdfdfd;
+	}
+	.title {
+		font-size: 20px;
+		color: $primary-color;
+	}
+	p {
+		line-height: 24px;
+		color: #6e6e6e;
+		text-align: left;
+	}
 }
