@@ -36,8 +36,8 @@
 			<section class="section-keynote">
 				<div class="margin-box"></div>
 				<div class="wrapper">
-					<div class="title">초대합니다</div>
-					<p>
+					<div data-scroll class="title">초대합니다</div>
+					<p data-scroll>
 						저희 둘 소중한 만남으로<br />
 						축복 속에서 하나가 되려 합니다.<br />
 						서로 존중하고 신뢰를 쌓으며<br />
@@ -46,14 +46,14 @@
 					</p>
 				</div>
 				<div class="gradation-box"></div>
-				<img src="https://res.cloudinary.com/dfqwmqy64/image/upload/c_scale,q_100,w_1000/v1660921878/wedding/NZ6_4039_3_1_yjoe7u.png" />
+				<img data-scroll src="https://res.cloudinary.com/dfqwmqy64/image/upload/c_scale,q_100,w_1000/v1660921878/wedding/NZ6_4039_3_1_yjoe7u.png" />
 				<div class="family-wrapper">
-					<div class="family">
+					<div data-scroll class="family">
 						<span>이영철 · 김봉옥</span>
 						<span class="middle">의 아들</span>
 						<span>성수</span>
 					</div>
-					<div class="family">
+					<div data-scroll class="family">
 						<span>김남규 · 김귀원</span>
 						<span class="middle">의 딸</span>
 						<span>하진</span>
@@ -145,7 +145,7 @@
 				<div class="section-title">
 					<p data-scroll>오시는 길</p>
 				</div>
-				<div class="address-wrapper">
+				<div data-scroll class="address-wrapper">
 					<p class="title">엘블레스</p>
 					<p class="para">서울 서초구 강남대로 213 스포타임 지하1층</p>
 				</div>
@@ -308,7 +308,7 @@
 		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=o2nmku8hr0"></script>
 		<script type="text/javascript" src="resources/js/blueimp-gallery.min.js"></script>
 		<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
-		<!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
+		<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 		<!-- <script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script> -->
 
 		<script>
@@ -326,13 +326,13 @@
 			});
 		</script>
 		<script>
-			// ScrollOut({
-			// 	threshold: 0.5,
-			// 	cssProps: {
-			// 		visibleY: true,
-			// 		visibleX: true,
-			// 	},
-			// });
+			ScrollOut({
+				threshold: 0.5,
+				cssProps: {
+					visibleY: true,
+					visibleX: true,
+				},
+			});
 
 			blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'), {
 				container: '#blueimp-gallery-carousel',
