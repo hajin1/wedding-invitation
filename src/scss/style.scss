@@ -149,6 +149,9 @@ section {
 	height: 100%;
 	position: relative;
 	background-color: black;
+	background-image: linear-gradient(0, hsl(10, 90, 66), transparent 30%);
+	background-size: 100% 100%;
+	mix-blend-mode: difference;
 	.video {
 		display: flex;
 		align-items: center;
@@ -442,12 +445,13 @@ button {
 	border-radius: 2rem;
 	width: 7rem;
 	height: 3rem;
-	background-color: #f5c6aa;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: $font-color;
+	background-clip: text;
+	-webkit-background-clip: text;
+	border: 1px solid white;
 
 	img {
 		width: 80px;
@@ -460,13 +464,27 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: linear-gradient(135deg, #e338f7 0, #eb4628 100%);
 	color: $background-color;
+	background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: move 10s ease infinite;
 
 	.button-wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+}
+
+@keyframes move {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
 
@@ -630,7 +648,7 @@ button {
 	height: 100%;
 	opacity: 0;
 	// opacity: 1; // 삭제
-	animation: fade-out 4s;
+	animation: fade-out 2.5s;
 	z-index: 50000;
 	overflow-y: hidden;
 
@@ -642,8 +660,8 @@ button {
 		transform: translate(-50%, -50%);
 		width: var(--size);
 		height: var(--size);
-		animation: zoom-in 2s; // 주석 해제
-		animation-delay: 1s; // 주석 해제 하세요
+		animation: zoom-in 1.5s; // 주석 해제
+		animation-delay: 0.5s; // 주석 해제 하세요
 	}
 }
 
