@@ -1,5 +1,5 @@
 import '../scss/style.scss';
-import { ACCOUNT_INFO } from './const';
+import { ACCOUNT_INFO, GALLERY_SRC, galleryResponsive } from './const';
 
 export default class App {
 	constructor() {
@@ -8,9 +8,8 @@ export default class App {
 
 	init() {
 		this.renderAccountInfo();
-		this.createGoogleCalendarButton();
-		this.bindMapButton();
-		this.bindInstaButton();
+		this.renderGallery();
+		this.bindButtonClickEvent();
 
 		const coverElm = document.getElementById('cover');
 		coverElm.addEventListener('animationend', () => {
@@ -21,6 +20,20 @@ export default class App {
 				contentLayerElm.classList.remove('hidden');
 				contentLayerElm.classList.add('show');
 			}
+		});
+	}
+
+	renderGallery() {
+		const galleryElm = document.getElementById('gallery');
+		GALLERY_SRC.map(src => {
+			const elm = document.createElement('a');
+			elm.setAttribute('href', src.replace('/upload', `/upload/${galleryResponsive.md}`));
+			elm.classList.add('img-wrapper');
+			const imgElm = document.createElement('img');
+			imgElm.setAttribute('loading', 'lazy');
+			imgElm.setAttribute('src', src.replace('/upload', `/upload/${galleryResponsive.sm}`));
+			elm.append(imgElm);
+			galleryElm.append(elm);
 		});
 	}
 
@@ -80,14 +93,12 @@ export default class App {
 		});
 	}
 
-	bindInstaButton() {
+	bindButtonClickEvent() {
 		const button = document.getElementById('insta-button');
 		button.addEventListener('click', () => {
 			window.open('https://www.instagram.com/jin_hiking_s2/');
 		});
-	}
 
-	bindMapButton() {
 		const naverButton = document.getElementById('naver-map-button');
 		naverButton.addEventListener('click', () => {
 			window.open('https://map.naver.com/v5/directions/-/14141468.151074853,4506638.338950755,엘블레스,37688101,PLACE_POI/-/transit?c=14141002.3740654,4506638.3529793,15,0,0,0,dh');
@@ -102,9 +113,7 @@ export default class App {
 		clipboard.on('success', () => {
 			window.alert(`주소가 복사되었습니다!`);
 		});
-	}
 
-	createGoogleCalendarButton() {
 		const buttonElm = document.getElementById('google-calendar-button');
 		buttonElm.addEventListener('click', () => {
 			const url =
