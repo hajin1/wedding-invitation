@@ -94,8 +94,17 @@ export default class App {
 	}
 
 	bindButtonClickEvent() {
-		const button = document.getElementById('insta-button');
-		button.addEventListener('click', () => {
+		const scrollDownButton = document.getElementById('scroll-down-btn');
+		scrollDownButton.addEventListener('click', e => {
+			e.preventDefault();
+			window.scrollTo({
+				top: document.querySelector('.section-keynote').offsetTop,
+				behavior: 'smooth',
+			});
+		});
+
+		const instaButton = document.getElementById('insta-button');
+		instaButton.addEventListener('click', () => {
 			window.open('https://www.instagram.com/jin_hiking_s2/');
 		});
 
