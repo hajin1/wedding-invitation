@@ -27,6 +27,7 @@ body {
 	font-family: 'SuseongDotum', 'Noto Sans Korean', 'Noto Sans';
 }
 
+// --- common ---
 section {
 	width: 100%;
 }
@@ -38,6 +39,12 @@ section {
 	justify-content: center;
 }
 
+.section-title {
+	font-size: $title-font-size;
+	line-height: $title-line-height;
+}
+
+// ---- main section ----
 .section-main {
 	overflow-x: hidden;
 	height: 100vh;
@@ -48,22 +55,6 @@ section {
 		left: 50%;
 		transform: translateX(-50%);
 	}
-}
-
-.section-introduce {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 30px;
-	min-height: 100vh;
-	height: 100vh;
-}
-
-.section-story {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 30px;
 }
 
 .caption-box {
@@ -85,28 +76,7 @@ section {
 	letter-spacing: -0.3px;
 }
 
-.section-title {
-	font-size: $title-font-size;
-	line-height: $title-line-height;
-}
-
-.introduce-title {
-	display: flex;
-	height: 100%;
-	align-items: center;
-}
-
-.transparent-box {
-	height: 350px;
-	width: 350px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	// transition: background-color 0.3s ease;
-}
-
 .intro-box {
-	// width: 100%;
 	height: 100%;
 	.video {
 		display: flex;
@@ -120,15 +90,8 @@ section {
 	}
 }
 
-.invite-box {
-	height: 375px;
-	position: relative;
-	width: 100%;
-}
-
 .video {
 	overflow: hidden;
-	// position: absolute;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
@@ -143,6 +106,7 @@ section {
 	}
 }
 
+// ---- calendar ----
 .c-calendar {
 	padding: 0 1rem;
 	margin: 0;
@@ -294,7 +258,6 @@ button {
 			position: absolute;
 			top: 0;
 			left: 0;
-			// transform: translate(50,50);
 			object-fit: cover;
 			margin: auto;
 			width: 100%;
@@ -450,6 +413,7 @@ button {
 	margin: 30px 20px;
 }
 
+// --- ScrollOut ---
 [data-scroll] {
 	transition: opacity 1s;
 }
@@ -460,140 +424,11 @@ button {
 	opacity: 0;
 }
 
-// ----------------
-
-.intro-section {
-	text-align: center;
-	min-height: 70vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.content-section {
-	--scroll-length: 1.5;
-	height: calc(var(--scroll-length) * 100vh);
-	width: 100%;
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-
-	.content .subheading,
-	.content .paragraph {
-		opacity: 1;
-		opacity: calc(1 + var(--viewport-y));
-	}
-}
-
-.figure {
-	width: 100%;
-	height: 100vh;
-	margin: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	> img {
-		// 🥕
-		display: block;
-		width: 100%;
-		// height: 100%;
-		// min-height: 50%;
-		height: 100%;
-		max-width: 100%;
-		object-fit: cover;
-		object-position: center center;
-	}
-}
-
-.content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	// max-width: 35em;
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	color: white;
-	padding: 2em;
-	font-size: 2.5vmin;
-
-	* {
-		text-shadow: 0 0 4vmin rgba(black, 0.25);
-	}
-
-	> .header {
-		grid-row: 1 / 2;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-	}
-
-	> .paragraph {
-		grid-row: 2 / 3;
-		line-height: 1.5;
-	}
-}
-
-.heading {
-	font-size: 2.75em;
-	margin: 0;
-}
-
-.subheading {
-	font-size: 1.25em;
-	font-weight: 600;
-	margin-bottom: 0.5em;
-}
-
-/* ---------------------------------- */
-
-.figure {
-	--scale: calc(0.8 + (0.2 * var(--scroll-length) * var(--visible-y)));
-	position: sticky;
-	top: 0;
-	left: 0;
-	margin: 0;
-	display: block;
-	overflow: hidden;
-	will-change: transform;
-	transform: scale(var(--scale));
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		background-color: rgba(#f4f4f4, 1);
-		opacity: calc(var(--visible-y) - 0.4);
-	}
-
-	> img {
-		display: block;
-		will-change: transform;
-		transform: scale(calc(1 / var(--scale)));
-	}
-}
-/* ---------------------------------- */
-
-.char {
-	display: inline-block;
-	opacity: calc(1 + ((var(--viewport-y) * 1.5) - var(--char-percent)));
-}
-
 *,
 *:before,
 *:after {
 	position: relative;
 	box-sizing: border-box;
-}
-
-.heading,
-.intro-heading {
-	font-weight: 700;
 }
 
 // ------- cover -----
