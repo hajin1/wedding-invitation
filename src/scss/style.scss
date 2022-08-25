@@ -12,9 +12,9 @@ $title-line-height: 30px;
 $title-font-size-lg: 34px;
 $title-line-height-lg: 40px;
 
-$subtitle-font-size: 20px;
+$subtitle-font-size: 18px;
 $subtitle-line-height: 30px;
-$subtitle-font-size-lg: 24px;
+$subtitle-font-size-lg: 22px;
 $subtitle-line-height-lg: 40px;
 
 $para1-font-size: 16px;
@@ -39,6 +39,7 @@ $img-max-width: 768px;
 
 html,
 body {
+	overflow-x: hidden;
 	margin: 0 auto;
 	background-color: white;
 	scroll-behavior: smooth;
@@ -602,6 +603,7 @@ $remon-color: #f5e8c7;
 	border-color: #fff !important;
 }
 .btn-scroll-holder {
+	cursor: pointer;
 	position: absolute;
 	bottom: 0;
 	right: 0;
