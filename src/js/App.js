@@ -80,7 +80,7 @@ export default class App {
 
 		Array.from(elms).map(elm => {
 			const listElm = elm.parentElement.querySelector('.account-list');
-			listElm.setAttribute('style', `height: ${listElm.childElementCount * 50}px`);
+			listElm.setAttribute('style', `height: ${listElm.childElementCount * 55}px`);
 			elm.addEventListener('click', () => {
 				if (listElm.classList.contains('hide')) {
 					listElm.classList.remove('hide');

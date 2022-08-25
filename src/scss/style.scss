@@ -6,9 +6,28 @@ $background-color: #f6f6f6;
 $font-color: #5d5d5d;
 $text-color: #ffffff;
 $grid-background-color: #f5f5f7;
-$title-font-size: 30px;
-$title-line-height: 36px;
 
+$title-font-size: 24px;
+$title-line-height: 30px;
+$title-font-size-lg: 34px;
+$title-line-height-lg: 40px;
+
+$subtitle-font-size: 20px;
+$subtitle-line-height: 30px;
+$subtitle-font-size-lg: 24px;
+$subtitle-line-height-lg: 40px;
+
+$para1-font-size: 16px;
+$para1-line-height: 20px;
+$para1-font-size-lg: 20px;
+$para1-line-height-lg: 24px;
+
+$para2-font-size: 14px;
+$para2-line-height: 28px;
+$para2-font-size-lg: 18px;
+$para2-line-height-lg: 26px;
+
+$img-max-width: 768px;
 // $grid-background-color: pink;
 
 @font-face {
@@ -31,12 +50,17 @@ body {
 section {
 	width: 100%;
 }
+img {
+	max-width: $img-max-width;
+}
 
 .section {
 	margin: 15rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 .section-title {
@@ -107,6 +131,9 @@ section {
 }
 
 // ---- calendar ----
+.content-wrapper {
+	width: 100%;
+}
 .c-calendar {
 	padding: 0 1rem;
 	margin: 0;
@@ -189,12 +216,14 @@ button {
 }
 
 .map-box {
-	width: calc(100% - 2rem);
+	width: 768px;
+	height: 280px;
 	margin: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	max-width: $img-max-width;
 }
 
 .address-wrapper {
@@ -203,11 +232,13 @@ button {
 		margin: 0;
 	}
 	.title {
-		font-size: 16px;
+		font-size: $para1-font-size;
+		line-height: $para1-line-height;
 		color: $primary-color;
 	}
 	.para {
-		font-size: 14px;
+		font-size: $para2-font-size;
+		line-height: $para2-line-height;
 		color: $font-color;
 	}
 }
@@ -219,17 +250,19 @@ button {
 	text-align: start;
 	margin: 0 30px;
 	word-break: break-word;
-}
 
-.way-title {
-	color: $primary-color;
-	font-size: 14px;
-}
+	.title {
+		color: $primary-color;
+		font-size: $para1-font-size;
+		line-height: $para1-line-height;
+	}
 
-.way-para {
-	color: $font-color;
-	font-size: 12px;
-	margin-bottom: 10px;
+	.para {
+		color: $font-color;
+		font-size: $para2-font-size;
+		line-height: $para2-line-height;
+		margin-bottom: 16px;
+	}
 }
 
 .map-button {
@@ -247,11 +280,11 @@ button {
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-evenly;
-	padding: 0 20px;
+	padding: 0 10px;
 	gap: 1px;
 
 	.img-wrapper {
-		width: 114px;
+		width: calc(100vw / 3 - 15px);
 		height: 140px;
 
 		img {
@@ -275,70 +308,69 @@ button {
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
+	}
+	.account-wrapper {
+		display: flex;
+		flex-direction: column;
 
-		.account-wrapper {
+		.account-title {
+			cursor: pointer;
+			width: 15rem;
+			height: 3rem;
+			display: flex;
+			background-color: $primary-color;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+			img {
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				right: 10px;
+				transform: rotate(0);
+				transition-duration: 0.5s;
+				transform-origin: center center;
+			}
+			.rotate {
+				transform: rotate(180deg);
+				transition-duration: 0.5s;
+			}
+		}
+
+		.account-list {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
+			transition: all 0.5s ease-out;
+			font-size: 12px;
+			opacity: 1;
+			background-color: $secendary-color;
+			visibility: visible;
+			align-items: center;
 
-			.account-title {
-				cursor: pointer;
-				width: 15rem;
-				height: 3rem;
+			.account-item {
 				display: flex;
-				background-color: $primary-color;
-				justify-content: center;
-				align-items: center;
-				z-index: 9999;
-				img {
-					width: 16px;
-					height: 16px;
-					position: absolute;
-					right: 10px;
-					transform: rotate(0);
-					transition-duration: 0.5s;
-					transform-origin: center center;
-				}
-				.rotate {
-					transform: rotate(180deg);
-					transition-duration: 0.5s;
-				}
-			}
-
-			.account-list {
-				display: flex;
-				flex-direction: column;
+				padding: 10px 20px;
+				width: 100%;
 				justify-content: space-between;
-				transition: all 0.5s ease-out;
-				font-size: 12px;
-				opacity: 1;
-				background-color: $secendary-color;
-				visibility: visible;
-				align-items: center;
 
-				.account-item {
-					display: flex;
-					padding: 10px 20px;
-					width: 100%;
-					justify-content: space-between;
-
-					button {
-						border: 1px solid black;
-						border-radius: 5px;
-						padding: 4px;
-						cursor: pointer;
-					}
-				}
-
-				.bank {
-					flex-grow: 3;
-					text-align: left;
+				button {
+					border: 1px solid black;
+					border-radius: 5px;
+					padding: 4px;
+					cursor: pointer;
 				}
 			}
-			.hide {
-				opacity: 0 !important;
-				visibility: hidden !important;
-				height: 0 !important;
+
+			.bank {
+				flex-grow: 3;
+				text-align: left;
 			}
+		}
+		.hide {
+			opacity: 0 !important;
+			visibility: hidden !important;
+			height: 0 !important;
 		}
 	}
 }
@@ -531,13 +563,14 @@ $remon-color: #f5e8c7;
 	}
 
 	.title {
-		font-size: 24px;
+		font-size: $title-font-size;
+		line-height: $title-line-height;
 		padding-bottom: 40px;
 	}
 	p {
 		color: $font-color;
-		font-size: 16px;
-		line-height: 30px;
+		font-size: $subtitle-font-size;
+		line-height: $subtitle-line-height;
 		margin: 0;
 	}
 	img {
@@ -545,8 +578,6 @@ $remon-color: #f5e8c7;
 	}
 	.family-wrapper {
 		margin: 20px 0;
-		font-size: 20px;
-		line-height: 28px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -557,6 +588,8 @@ $remon-color: #f5e8c7;
 		display: flex;
 		justify-content: space-between;
 		height: 40px;
+		font-size: $subtitle-font-size;
+		line-height: $subtitle-line-height;
 	}
 	.middle {
 		font-size: 12px;
@@ -701,6 +734,18 @@ $remon-color: #f5e8c7;
 
 // ---- responsize ----
 @media screen and (min-width: 767px) {
+	.section-title {
+		font-size: $title-font-size-lg;
+		line-height: $title-line-height-lg;
+	}
+	.section-keynote {
+		.wrapper {
+			padding: 40px 0;
+		}
+	}
+	.map-box {
+		height: 400px;
+	}
 	.caption {
 		font-size: 46px;
 		line-height: 60px;
@@ -736,6 +781,69 @@ $remon-color: #f5e8c7;
 			margin-bottom: -1.3vw;
 			height: 2.6vw;
 			width: 0.83vw;
+		}
+	}
+
+	.content-wrapper {
+		max-width: $img-max-width;
+	}
+	.section-keynote {
+		.title {
+			font-size: $title-font-size-lg;
+			line-height: $title-line-height-lg;
+		}
+		p,
+		.family {
+			font-size: $subtitle-font-size-lg;
+			line-height: $subtitle-line-height-lg;
+		}
+		.family {
+			width: 272px;
+		}
+	}
+
+	.gallery {
+		display: flex;
+		flex-wrap: wrap;
+		width: $img-max-width;
+		justify-content: space-evenly;
+		padding: 0;
+		gap: 1px;
+
+		.img-wrapper {
+			width: 180px;
+			height: 220px;
+		}
+	}
+
+	.address-wrapper,
+	.way-to-come {
+		.title {
+			font-size: $para1-font-size-lg;
+			line-height: $para1-line-height-lg;
+		}
+		.para {
+			font-size: $para2-font-size-lg;
+			line-height: $para2-line-height-lg;
+			margin-bottom: 20px;
+		}
+	}
+
+	.notice-wrapper {
+		max-width: $img-max-width;
+		.title {
+			font-size: $subtitle-font-size-lg;
+			line-height: $subtitle-line-height-lg;
+		}
+	}
+	.section-account {
+		.account-wrapper {
+			.account-title {
+				width: 20rem;
+			}
+			.account-list {
+				font-size: 14px;
+			}
 		}
 	}
 }
