@@ -21,8 +21,7 @@ module.exports = (env, argv) => {
 					test: /\.(scss|css)$/,
 					use: [
 						{
-							// inject CSS to page
-							loader: 'style-loader',
+							loader: MiniCssExtractPlugin.loader,
 						},
 						{
 							// translates CSS into CommonJS modules
