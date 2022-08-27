@@ -95,7 +95,7 @@ img {
 	position: relative;
 	text-align: start;
 	transform: translate(10%, 50%);
-	top: 10%;
+	top: 5%;
 	font-size: 7.5vw;
 	line-height: 9.5vw;
 	letter-spacing: -0.3px;
@@ -112,7 +112,7 @@ img {
 			height: 100%;
 			width: 100%;
 
-			animation: circle-animation 3s;
+			animation: circle-animation 2s;
 			clip-path: circle(100% at 50% 50%);
 		}
 	}
@@ -467,12 +467,12 @@ button {
 }
 [data-scroll='in'] {
 	opacity: 1;
-	transform: translateY(-1em);
+	transform: translateY(-0.5);
 	transition: transform 0.3s;
 }
 [data-scroll='out'] {
 	opacity: 0;
-	transform: translateY(1em);
+	transform: translateY(0.5em);
 	transition: transform 0.3s;
 }
 
