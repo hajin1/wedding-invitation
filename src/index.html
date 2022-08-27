@@ -14,13 +14,14 @@
 
 	<body>
 		<div id="cover" class="cover">
-			<img id="icon" src="resources/img/heart.svg" />
+			<div id="typeit-elm"></div>
+			<!-- <img id="icon" src="resources/img/heart.svg" /> -->
 		</div>
+		<!-- <div id="content-layer"> -->
 		<div id="content-layer" class="hidden">
 			<section class="section-main">
 				<div id="scroll-down-btn" class="btn-scroll-holder white">
 					<button type="button" class="btn-scroll">
-						<!-- sta-down -->
 						<span class="circle-half-wrap pos-top"><i class="circle"></i></span>
 						<span class="box"></span>
 						<span class="circle-half-wrap pos-bot"><i class="circle"></i></span>
@@ -33,7 +34,7 @@
 				</div>
 				<div class="intro-box">
 					<div class="video">
-						<video class="css-z06m51" autoplay="" loop="" muted="" playsinline="">
+						<video autoplay="" loop="" muted="" playsinline="">
 							<source src="https://res.cloudinary.com/dfqwmqy64/video/upload/v1660835197/wedding/V20220818_230009000_39ABF0C4-C870-4DAD-BF7D-0CFBC9AC7CD6_vgaz2i.mov" type="video/mp4" />
 						</video>
 					</div>
@@ -41,7 +42,7 @@
 
 				<div class="caption-box">
 					<div class="caption" id="root">
-						<p>이성수 & 김하진<br />결혼합니다!</p>
+						<p class="slide-text">이성수 & 김하진<br />결혼합니다!</p>
 					</div>
 				</div>
 			</section>
@@ -264,26 +265,21 @@
 			</section>
 		</div>
 
-		<!-- <script>
-		document.addEventListener('DOMContentLoaded', () => {
-			new TypeIt('#intro_text')
-				.pause(500)
-				.move(-2, { delay: 500 })
-				.type(' ❤ ')
-				.move(5, { delay: 1000 })
-				.type('이의 약혼')
-				.pause(300)
-				.delete(2, { delay: 1000 })
-				.type('결혼식에 초대합니다.')
-				.go()
-		})
-	</script> -->
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				// const instance = new TypeIt('#typeit', {
+				// 	speed: 50,
+				// });
+				// instance.type('Jack and <i class="name">Jill</i> went up the hill').delete('.name', { to: 'END' }).go();
+				new TypeIt('#typeit-elm').type('2022년 10월 2일<br/>이성수 김하진 결혼합니다').go();
+			});
+		</script>
 
 		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=o2nmku8hr0"></script>
 		<script type="text/javascript" src="resources/js/blueimp-gallery.min.js"></script>
 		<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
 		<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-		<!-- <script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script> -->
+		<script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script>
 
 		<script>
 			const position = new naver.maps.LatLng(37.483, 127.035);
@@ -301,26 +297,12 @@
 		</script>
 		<script>
 			ScrollOut({
-				threshold: 0.5,
+				threshold: 0.2,
 				cssProps: {
 					visibleY: true,
 					visibleX: true,
 				},
 			});
-
-			blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'), {
-				container: '#blueimp-gallery-carousel',
-				carousel: true,
-			});
-
-			document.getElementById('links').onclick = function (event) {
-				event = event || window.event;
-				const target = event.target || event.srcElement;
-				const link = target.src ? target.parentNode : target;
-				const options = { index: link, event: event };
-				const links = this.getElementsByTagName('a');
-				blueimp.Gallery(links, options);
-			};
 		</script>
 	</body>
 </html>

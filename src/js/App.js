@@ -1,7 +1,10 @@
+import { Modal } from 'bootstrap';
 import '../scss/style.scss';
 import { ACCOUNT_INFO, GALLERY_SRC, galleryResponsive } from './const';
 
 export default class App {
+	galleryOpenFlag = false;
+
 	constructor() {
 		this.init();
 	}
@@ -13,6 +16,7 @@ export default class App {
 
 		const coverElm = document.getElementById('cover');
 		coverElm.addEventListener('animationend', () => {
+			console.log('animation end');
 			coverElm.classList.add('hidden');
 
 			const contentLayerElm = document.getElementById('content-layer');
@@ -21,17 +25,69 @@ export default class App {
 				contentLayerElm.classList.add('show');
 			}
 		});
+
+		window.onpopstate = function (e) {
+			window.alert('popstate');
+			const slideContents = document.getElementsByClassName('slide-content');
+			if (slideContents.length > 0) {
+				document.getElementById('blueimp-gallery').style = 'display:none';
+			}
+		};
+
+		window.addEventListener('DOMContentLoaded', () => {
+			blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'), {
+				container: '#blueimp-gallery-carousel',
+				carousel: true,
+
+				onopen: () => {
+					console.log('open');
+					this.galleryOpenFlag = true;
+				},
+
+				onclose: () => {
+					console.log('close');
+					this.galleryOpenFlag = false;
+				},
+				onslide: function (index, slide) {
+					console.log(`slice - ${index}`);
+				},
+			});
+
+			document.getElementById('links').onclick = function (event) {
+				event = event || window.event;
+				const target = event.target || event.srcElement;
+				const link = target.src ? target.parentNode : target;
+				const options = { index: link, event: event };
+				const links = this.getElementsByTagName('a');
+				blueimp.Gallery(links, options);
+			};
+		});
+	}
+
+	onBackButton(event) {
+		event.preventDefault();
+		event.stopPropagation;
+		window.alert('back button');
+
+		if (imageModalOpen) {
+			event.preventDefault();
+			Modal.close();
+		}
 	}
 
 	renderGallery() {
 		const galleryElm = document.getElementById('gallery');
 		GALLERY_SRC.map(src => {
+			const mdSrc = src.replace('/upload', `/upload/${galleryResponsive.md}`);
+			const smSrc = src.replace('/upload', `/upload/${galleryResponsive.sm}`);
+			const lgSrc = src.replace('/upload', `/upload/${galleryResponsive.lg}`);
+
 			const elm = document.createElement('a');
-			elm.setAttribute('href', src.replace('/upload', `/upload/${galleryResponsive.md}`));
+			elm.setAttribute('href', lgSrc);
 			elm.classList.add('img-wrapper');
 			const imgElm = document.createElement('img');
 			imgElm.setAttribute('loading', 'lazy');
-			imgElm.setAttribute('src', src.replace('/upload', `/upload/${galleryResponsive.sm}`));
+			imgElm.setAttribute('src', smSrc);
 			elm.append(imgElm);
 			galleryElm.append(elm);
 		});

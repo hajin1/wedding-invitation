@@ -48,4 +48,5 @@ export const GALLERY_SRC = [
 export const galleryResponsive = {
 	sm: 'c_scale,w_300',
 	md: 'c_scale,q_100,w_700',
+	lg: 'c_scale,q_100,w_1200',
 };

@@ -96,8 +96,8 @@ img {
 	text-align: start;
 	transform: translate(10%, 50%);
 	top: 10%;
-	font-size: 5.5vw;
-	line-height: 6.5vw;
+	font-size: 7.5vw;
+	line-height: 9.5vw;
 	letter-spacing: -0.3px;
 }
 
@@ -111,7 +111,22 @@ img {
 			object-fit: cover;
 			height: 100%;
 			width: 100%;
+
+			animation: circle-animation 3s;
+			clip-path: circle(100% at 50% 50%);
 		}
+	}
+}
+
+@keyframes circle-animation {
+	0% {
+		clip-path: circle(10% at 50% 50%);
+	}
+	50% {
+		clip-path: circle(30% at 50% 50%);
+	}
+	100% {
+		clip-path: circle(80% at 50% 50%);
 	}
 }
 
@@ -471,22 +486,31 @@ button {
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	// opacity: 1; // 삭제
-	animation: fade-out 2.5s;
+	animation: fade-out 3.5s;
+	animation-delay: 0.5s;
 	z-index: 50000;
 	overflow-y: hidden;
 
-	#icon {
-		--size: 50px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: var(--size);
-		height: var(--size);
-		animation: zoom-in 1.5s; // 주석 해제
-		animation-delay: 0.5s; // 주석 해제 하세요
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	#typeit-elm {
+		font-size: $title-font-size;
+		line-height: $title-line-height;
 	}
+
+	// #icon {
+	// 	--size: 50px;
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	width: var(--size);
+	// 	height: var(--size);
+	// 	animation: zoom-in 1.5s; // 주석 해제
+	// 	animation-delay: 0.5s; // 주석 해제 하세요
+	// }
 }
 
 @keyframes zoom-in {
