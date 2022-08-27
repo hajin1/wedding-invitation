@@ -16,7 +16,6 @@ export default class App {
 
 		const coverElm = document.getElementById('cover');
 		coverElm.addEventListener('animationend', () => {
-			console.log('animation end');
 			coverElm.classList.add('hidden');
 
 			const contentLayerElm = document.getElementById('content-layer');
