@@ -25,8 +25,13 @@ export default class App {
 			}
 		});
 
+		const galleryElm = document.getElementById('gallery');
+		galleryElm.addEventListener('click', e => {
+			history.pushState({ pageNum: 1 }, null);
+		});
+
+		history.scrollRestoration = 'manual'; // 꼭 'manual' 로 설정해주어야 함
 		window.onpopstate = function (e) {
-			window.alert('popstate');
 			const slideContents = document.getElementsByClassName('slide-content');
 			if (slideContents.length > 0) {
 				document.getElementById('blueimp-gallery').style = 'display:none';
@@ -37,19 +42,6 @@ export default class App {
 			blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'), {
 				container: '#blueimp-gallery-carousel',
 				carousel: true,
-
-				onopen: () => {
-					console.log('open');
-					this.galleryOpenFlag = true;
-				},
-
-				onclose: () => {
-					console.log('close');
-					this.galleryOpenFlag = false;
-				},
-				onslide: function (index, slide) {
-					console.log(`slice - ${index}`);
-				},
 			});
 
 			document.getElementById('links').onclick = function (event) {
@@ -61,17 +53,6 @@ export default class App {
 				blueimp.Gallery(links, options);
 			};
 		});
-	}
-
-	onBackButton(event) {
-		event.preventDefault();
-		event.stopPropagation;
-		window.alert('back button');
-
-		if (imageModalOpen) {
-			event.preventDefault();
-			Modal.close();
-		}
 	}
 
 	renderGallery() {
@@ -110,16 +91,21 @@ export default class App {
 	}
 
 	renderAccountInfo() {
+		const parentRenderOnly = new URLSearchParams(location.search).get('parent');
 		const groomListElm = document.getElementById('groom-account-list');
 		ACCOUNT_INFO.groom.map(account => {
-			const elm = this.createAccountItem(account);
-			groomListElm.append(elm);
+			if ((parentRenderOnly && account.parent) || !parentRenderOnly) {
+				const elm = this.createAccountItem(account);
+				groomListElm.append(elm);
+			}
 		});
 
 		const brideListElm = document.getElementById('bride-account-list');
 		ACCOUNT_INFO.bride.map(account => {
-			const elm = this.createAccountItem(account);
-			brideListElm.append(elm);
+			if ((parentRenderOnly && account.parent) || !parentRenderOnly) {
+				const elm = this.createAccountItem(account);
+				brideListElm.append(elm);
+			}
 		});
 
 		const clipboard = new ClipboardJS('.copy-btn');
