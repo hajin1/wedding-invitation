@@ -1,6 +1,5 @@
-import { Modal } from 'bootstrap';
 import '../scss/style.scss';
-import { ACCOUNT_INFO, GALLERY_SRC, galleryResponsive } from './const';
+import { ACCOUNT_INFO, GALLERY_SRC, galleryResponsive, ALT_IMAGE_SRC } from './const';
 
 export default class App {
 	galleryOpenFlag = false;
@@ -10,6 +9,7 @@ export default class App {
 	}
 
 	init() {
+		this.createVideoElement();
 		this.renderAccountInfo();
 		this.renderGallery();
 		this.bindButtonClickEvent();
@@ -53,6 +53,32 @@ export default class App {
 				blueimp.Gallery(links, options);
 			};
 		});
+	}
+
+	createVideoElement() {
+		const videoElm = document.createElement('video');
+		const sourceElm = document.createElement('source');
+
+		videoElm.setAttribute('autoplay', '');
+		videoElm.setAttribute('mute', '');
+		videoElm.setAttribute('playsinline', '');
+		videoElm.setAttribute('loop', '');
+		sourceElm.setAttribute(
+			'src',
+			'https://res.cloudinary.com/dfqwmqy64/video/upload/c_scale,q_87,w_1500/v1662127619/wedding/V20220818_230009000_39ABF0C4-C870-4DAD-BF7D-0CFBC9AC7CD6_1_wvpiyo.mp4'
+		);
+		sourceElm.setAttribute('type', 'video/mp4');
+		sourceElm.onerror = () => {
+			console.log('비디오에러');
+			videoElm.classList.add('hidden');
+
+			const altImgElm = document.createElement('img');
+			altImgElm.setAttribute('src', ALT_IMAGE_SRC);
+			document.getElementById('video').append(altImgElm);
+		};
+
+		videoElm.append(sourceElm);
+		document.getElementById('video').append(videoElm);
 	}
 
 	renderGallery() {

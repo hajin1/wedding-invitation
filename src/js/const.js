@@ -35,19 +35,21 @@ export const ACCOUNT_INFO = {
 	],
 };
 
+export const ALT_IMAGE_SRC = 'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/2_hob9ae.jpg';
+
 export const GALLERY_SRC = [
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141003/wedding/1_srgtoo.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141003/wedding/2_vfyv5z.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141004/wedding/3_ekigxm.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141003/wedding/4_fsxvay.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141003/wedding/5_u23urt.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141003/wedding/6_iowupw.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141004/wedding/7_mfrmo3.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141004/wedding/8_utuv9m.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141004/wedding/9_ik2uu8.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141005/wedding/10_hibrgl.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141004/wedding/11_jyathh.jpg',
-	'https://res.cloudinary.com/dfqwmqy64/image/upload/v1660141006/wedding/12_if6vdo.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269793/wedding-invitation/12_ee7xsp.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/1_xlfdvx.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/6_vlmy6q.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/2_hob9ae.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/4_egvgie.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/3_lbi5w6.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269791/wedding-invitation/5_w21mnr.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269792/wedding-invitation/11_pjie3x.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269792/wedding-invitation/7_eenhvg.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269792/wedding-invitation/9_ypfwdm.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269792/wedding-invitation/10_zzx7tf.jpg',
+	'https://res.cloudinary.com/dufqeiojg/image/upload/v1662269792/wedding-invitation/8_mwyeu7.jpg',
 ];
 
 export const galleryResponsive = {
