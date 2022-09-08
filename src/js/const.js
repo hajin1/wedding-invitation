@@ -53,7 +53,7 @@ export const GALLERY_SRC = [
 ];
 
 export const galleryResponsive = {
-	sm: 'c_scale,w_300',
-	md: 'c_scale,q_100,w_700',
-	lg: 'c_scale,q_100,w_1200',
+	sm: 'c_scale,w_300,f_auto',
+	md: 'c_scale,q_100,w_700,f_auto',
+	lg: 'c_scale,q_100,w_1200,f_auto',
 };
